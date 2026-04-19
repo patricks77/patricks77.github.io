@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick - Développeur Web</title>
+    <title>Patrick - Musique</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,12 +11,12 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a href="#" class="logo">PS</a>
+            <a href="#" class="logo">PATRICK</a>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#musique">Musique</a></li>
+                <li><a href="#concerts">Concerts</a></li>
                 <li><a href="#apropos">À propos</a></li>
-                <li><a href="#competences">Compétences</a></li>
-                <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <div class="hamburger">
@@ -31,13 +31,19 @@
     <section id="accueil" class="hero">
         <div class="container">
             <div class="hero-content">
-                <p class="subtitle">Bonjour, je suis</p>
-                <h1>Patrick</h1>
-                <h2>Développeur Web Passionné</h2>
-                <p class="description">Je crée des expériences web modernes, performantes et élégantes.</p>
+                <p class="subtitle">Nouveau single disponible</p>
+                <h1>PATRICK</h1>
+                <h2>Musicien & Compositeur</h2>
+                <p class="description">Découvre mon univers musical entre mélodies captivantes et rythmes entraînants.</p>
                 <div class="cta-buttons">
-                    <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+                    <a href="#musique" class="btn btn-primary">Écouter ma musique</a>
                     <a href="#contact" class="btn btn-secondary">Me contacter</a>
+                </div>
+                <div class="streaming-links">
+                    <a href="#" class="stream-btn" title="Spotify">🎵</a>
+                    <a href="#" class="stream-btn" title="Apple Music">🍎</a>
+                    <a href="#" class="stream-btn" title="YouTube">▶️</a>
+                    <a href="#" class="stream-btn" title="SoundCloud">☁️</a>
                 </div>
             </div>
         </div>
@@ -46,136 +52,132 @@
         </div>
     </section>
 
+    <!-- Section Musique -->
+    <section id="musique" class="music">
+        <div class="container">
+            <h2 class="section-title">Ma Musique</h2>
+            <div class="music-grid">
+                <div class="music-card">
+                    <div class="album-cover">
+                        <div class="album-placeholder">🎸</div>
+                        <div class="play-overlay">
+                            <span class="play-btn">▶</span>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Mon Premier Single</h3>
+                        <p class="music-year">2026</p>
+                        <p class="music-desc">Mon premier morceau, un mélange de pop et d'électro.</p>
+                        <div class="music-links">
+                            <a href="#" class="link">Spotify</a>
+                            <a href="#" class="link">YouTube</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="album-cover">
+                        <div class="album-placeholder">🎹</div>
+                        <div class="play-overlay">
+                            <span class="play-btn">▶</span>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Nouvel EP</h3>
+                        <p class="music-year">2026</p>
+                        <p class="music-desc">Un EP de 4 titres explorant différents styles musicaux.</p>
+                        <div class="music-links">
+                            <a href="#" class="link">Spotify</a>
+                            <a href="#" class="link">Apple Music</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="music-card">
+                    <div class="album-cover">
+                        <div class="album-placeholder">🎤</div>
+                        <div class="play-overlay">
+                            <span class="play-btn">▶</span>
+                        </div>
+                    </div>
+                    <div class="music-info">
+                        <h3>Cover Acoustique</h3>
+                        <p class="music-year">2026</p>
+                        <p class="music-desc">Reprises de mes morceaux préférés en version acoustique.</p>
+                        <div class="music-links">
+                            <a href="#" class="link">YouTube</a>
+                            <a href="#" class="link">SoundCloud</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Concerts -->
+    <section id="concerts" class="concerts">
+        <div class="container">
+            <h2 class="section-title">Concerts & Événements</h2>
+            <div class="concerts-list">
+                <div class="concert-item">
+                    <div class="concert-date">
+                        <span class="date-day">15</span>
+                        <span class="date-month">JUIN</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3>Festival de Musique Locale</h3>
+                        <p>📍 Paris, France</p>
+                    </div>
+                    <a href="#" class="btn btn-small">Infos</a>
+                </div>
+                <div class="concert-item">
+                    <div class="concert-date">
+                        <span class="date-day">22</span>
+                        <span class="date-month">JUIL</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3>Concert en Plein Air</h3>
+                        <p>📍 Lyon, France</p>
+                    </div>
+                    <a href="#" class="btn btn-small">Infos</a>
+                </div>
+                <div class="concert-item">
+                    <div class="concert-date">
+                        <span class="date-day">05</span>
+                        <span class="date-month">AOÛT</span>
+                    </div>
+                    <div class="concert-info">
+                        <h3>Open Mic Night</h3>
+                        <p>📍 Marseille, France</p>
+                    </div>
+                    <a href="#" class="btn btn-small">Infos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Section À propos -->
     <section id="apropos" class="about">
         <div class="container">
-            <h2 class="section-title">À propos de moi</h2>
+            <h2 class="section-title">À propos</h2>
             <div class="about-content">
+                <div class="about-image">
+                    <div class="artist-photo">🎸</div>
+                </div>
                 <div class="about-text">
-                    <p>Je suis un développeur web passionné par la création d'applications et de sites internet qui allient design et fonctionnalité. J'aime relever de nouveaux défis techniques et apprendre continuellement.</p>
-                    <p>Mon objectif est de construire des expériences utilisateur fluides et mémorables tout en écrivant du code propre et maintenable.</p>
-                </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <span class="stat-number">2+</span>
-                        <span class="stat-label">Années d'expérience</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Projets réalisés</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Passion</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Compétences -->
-    <section id="competences" class="skills">
-        <div class="container">
-            <h2 class="section-title">Mes Compétences</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Frontend</h3>
-                    <ul>
-                        <li>HTML5 & CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>React</li>
-                        <li>Vue.js</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Backend</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>API REST</li>
-                        <li>Bases de données</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Design</h3>
-                    <ul>
-                        <li>Responsive Design</li>
-                        <li>UI/UX</li>
-                        <li>Figma</li>
-                        <li>Animation CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠️</div>
-                    <h3>Outils</h3>
-                    <ul>
-                        <li>Git & GitHub</li>
-                        <li>VS Code</li>
-                        <li>Docker</li>
-                        <li>CI/CD</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Section Projets -->
-    <section id="projets" class="projects">
-        <div class="container">
-            <h2 class="section-title">Mes Projets</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🚀</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Projet 1</h3>
-                        <p>Description de ton premier projet. Une application web moderne avec React.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
+                    <p>Je suis Patrick, musicien passionné et compositeur. Ma musique est un mélange de styles variés, influencée par la pop, le rock et l'électro.</p>
+                    <p>Je compose, écris et produis mes propres morceaux depuis plusieurs années. Mon objectif est de créer des chansons qui résonnent avec les gens et qui racontent des histoires.</p>
+                    <p>Rejoins-moi dans cette aventure musicale et découvre mon univers !</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">10+</span>
+                            <span class="stat-label">Morceaux</span>
                         </div>
-                        <div class="project-links">
-                            <a href="#" class="link">Voir le site →</a>
-                            <a href="#" class="link">Code source →</a>
+                        <div class="stat">
+                            <span class="stat-number">5+</span>
+                            <span class="stat-label">Concerts</span>
                         </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">💡</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Projet 2</h3>
-                        <p>Description de ton deuxième projet. Une solution innovante pour résoudre un problème.</p>
-                        <div class="project-tags">
-                            <span class="tag">Vue.js</span>
-                            <span class="tag">Firebase</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link">Voir le site →</a>
-                            <a href="#" class="link">Code source →</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-placeholder">🎯</div>
-                    </div>
-                    <div class="project-info">
-                        <h3>Projet 3</h3>
-                        <p>Description de ton troisième projet. Un outil utile pour la productivité.</p>
-                        <div class="project-tags">
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">API</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="link">Voir le site →</a>
-                            <a href="#" class="link">Code source →</a>
+                        <div class="stat">
+                            <span class="stat-number">1000+</span>
+                            <span class="stat-label">Écoutes</span>
                         </div>
                     </div>
                 </div>
@@ -186,22 +188,26 @@
     <!-- Section Contact -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Me Contacter</h2>
+            <h2 class="section-title">Contact & Booking</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <p>Tu as un projet en tête ou tu veux simplement discuter ? N'hésite pas à me contacter !</p>
+                    <p>Tu veux booker un concert, collaborer ou simplement discuter musique ? Contacte-moi !</p>
                     <div class="contact-links">
-                        <a href="mailto:patrick@example.com" class="contact-item">
+                        <a href="mailto:patrick.musique@example.com" class="contact-item">
                             <span class="contact-icon">📧</span>
-                            <span>patrick@example.com</span>
+                            <span>patrick.musique@example.com</span>
                         </a>
-                        <a href="https://github.com/patricks77" target="_blank" class="contact-item">
-                            <span class="contact-icon">💻</span>
-                            <span>GitHub</span>
+                        <a href="https://instagram.com" target="_blank" class="contact-item">
+                            <span class="contact-icon">📷</span>
+                            <span>Instagram</span>
                         </a>
-                        <a href="#" target="_blank" class="contact-item">
-                            <span class="contact-icon">💼</span>
-                            <span>LinkedIn</span>
+                        <a href="https://youtube.com" target="_blank" class="contact-item">
+                            <span class="contact-icon">▶️</span>
+                            <span>YouTube</span>
+                        </a>
+                        <a href="https://spotify.com" target="_blank" class="contact-item">
+                            <span class="contact-icon">🎵</span>
+                            <span>Spotify</span>
                         </a>
                     </div>
                 </div>
@@ -213,7 +219,13 @@
     <footer class="footer">
         <div class="container">
             <p>© 2026 Patrick. Tous droits réservés.</p>
-            <p>Fait avec ❤️ et beaucoup de ☕</p>
+            <p>Fait avec 🎵 et beaucoup de passion</p>
+            <div class="footer-links">
+                <a href="#">Spotify</a>
+                <a href="#">Apple Music</a>
+                <a href="#">YouTube</a>
+                <a href="#">Instagram</a>
+            </div>
         </div>
     </footer>
 

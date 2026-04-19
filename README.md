@@ -1,6 +1,10 @@
 # patricks77.github.io
 
-Mon site web personnel / portfolio hébergé sur GitHub Pages.
+Mon site web musical / artiste hébergé sur GitHub Pages.
+
+## 🎵 À propos
+
+Site officiel de Patrick - musicien et compositeur.
 
 ## 🚀 Technologies utilisées
 
@@ -11,11 +15,12 @@ Mon site web personnel / portfolio hébergé sur GitHub Pages.
 
 ## ✨ Fonctionnalités
 
-- Design moderne et épuré
-- Animations fluides au scroll
-- Navigation responsive avec menu mobile
-- Sections : Accueil, À propos, Compétences, Projets, Contact
-- Compatible tous navigateurs modernes
+- Design moderne avec ambiance musicale
+- Animations de notes flottantes
+- Section musique avec lecteurs
+- Calendrier des concerts
+- Liens vers plateformes de streaming
+- Navigation responsive
 
 ## 🌐 Lien du site
 
@@ -24,9 +29,17 @@ Mon site web personnel / portfolio hébergé sur GitHub Pages.
 ## 📝 Personnalisation
 
 Pour modifier le contenu :
-1. Éditer `index.html` pour le contenu
-2. Éditer `style.css` pour les styles
+1. Éditer `index.html` pour le contenu (titres, descriptions, concerts)
+2. Éditer `style.css` pour les styles et couleurs
 3. Éditer `script.js` pour les interactions
+
+## 🔗 Plateformes à connecter
+
+- Spotify
+- Apple Music
+- YouTube Music
+- SoundCloud
+- Instagram
 
 ## 📄 Licence
 

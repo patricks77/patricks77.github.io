@@ -61,7 +61,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observer les éléments à animer
-document.querySelectorAll('.skill-card, .project-card, .stat, .about-text').forEach(el => {
+document.querySelectorAll('.music-card, .concert-item, .stat, .about-text').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'all 0.6s ease';
@@ -120,42 +120,50 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Effet de particules sur le hero (optionnel, léger)
-function createParticle() {
+// Animation des notes de musique flottantes
+function createMusicNote() {
     const hero = document.querySelector('.hero');
     if (!hero) return;
     
-    const particle = document.createElement('div');
-    particle.style.position = 'absolute';
-    particle.style.width = '4px';
-    particle.style.height = '4px';
-    particle.style.background = 'rgba(255, 255, 255, 0.3)';
-    particle.style.borderRadius = '50%';
-    particle.style.left = Math.random() * 100 + '%';
-    particle.style.top = Math.random() * 100 + '%';
-    particle.style.pointerEvents = 'none';
-    particle.style.animation = `float ${3 + Math.random() * 4}s ease-in-out infinite`;
+    const notes = ['♪', '♫', '♬', '♩'];
+    const note = document.createElement('div');
+    note.textContent = notes[Math.floor(Math.random() * notes.length)];
+    note.style.position = 'absolute';
+    note.style.fontSize = (20 + Math.random() * 30) + 'px';
+    note.style.color = 'rgba(255, 255, 255, 0.15)';
+    note.style.left = Math.random() * 100 + '%';
+    note.style.top = '100%';
+    note.style.pointerEvents = 'none';
+    note.style.animation = `floatNote ${4 + Math.random() * 4}s linear forwards`;
     
-    hero.appendChild(particle);
+    hero.appendChild(note);
     
     setTimeout(() => {
-        particle.remove();
-    }, 7000);
+        note.remove();
+    }, 8000);
 }
 
-// Ajouter l'animation CSS pour les particules
+// Ajouter l'animation CSS pour les notes
 const style = document.createElement('style');
 style.textContent = `
-    @keyframes float {
-        0%, 100% { transform: translateY(0) translateX(0); opacity: 0; }
+    @keyframes floatNote {
+        0% { transform: translateY(0) rotate(0deg); opacity: 0; }
         10% { opacity: 1; }
         90% { opacity: 1; }
-        100% { transform: translateY(-100px) translateX(50px); opacity: 0; }
+        100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
     }
 `;
 document.head.appendChild(style);
 
-// Créer des particules périodiquement
-setInterval(createParticle, 1000);
+// Créer des notes périodiquement
+setInterval(createMusicNote, 1500);
 
-console.log('🚀 Site de Patrick chargé avec succès !');
+// Effet visualiseur audio (simulation)
+const playButtons = document.querySelectorAll('.play-btn');
+playButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        alert('🎵 Lecture du morceau ! (Connecte tes liens streaming ici)');
+    });
+});
+
+console.log('🎵 Site musical de Patrick chargé avec succès !');

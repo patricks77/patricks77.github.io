@@ -3,232 +3,481 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Patrick - Musique</title>
+    <meta name="description" content="DeePat Studio — l'atelier de Patrick Séguin. Applications, designs, écrits et musique.">
+    <title>DeePat Studio — Atelier de Patrick Séguin</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">PATRICK</a>
+<body data-density="regular" data-typo="editorial">
+
+    <!-- ─── TICKER ─────────────────────────────────────────── -->
+    <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+            <span>DeePat Studio</span><span>·</span>
+            <span>Patrick Séguin</span><span>·</span>
+            <span>SoulsGrace</span><span>·</span>
+            <span>Apps · Designs · Écrits · Musique</span><span>·</span>
+            <span>Atelier établi en 2026</span><span>·</span>
+            <span>DeePat Studio</span><span>·</span>
+            <span>Patrick Séguin</span><span>·</span>
+            <span>SoulsGrace</span><span>·</span>
+            <span>Apps · Designs · Écrits · Musique</span><span>·</span>
+            <span>Atelier établi en 2026</span><span>·</span>
+        </div>
+    </div>
+
+    <!-- ─── NAV ────────────────────────────────────────────── -->
+    <nav class="nav" aria-label="Navigation principale">
+        <div class="nav-inner">
+            <a href="index.html" class="brand">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+                </span>
+                <span class="brand-text">
+                    <strong>DeePat</strong>
+                    <em>Studio</em>
+                </span>
+            </a>
             <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#musique">Musique</a></li>
-                <li><a href="#concerts">Concerts</a></li>
-                <li><a href="#apropos">À propos</a></li>
+                <li><a href="applications.html">Applications</a></li>
+                <li><a href="designs.html">Designs</a></li>
+                <li><a href="ecrits.html">Écrits</a></li>
+                <li><a href="musique.html">Musique</a></li>
+                <li><a href="journal.html">Journal</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+            <div class="nav-meta">
+                <span class="status-dot" aria-hidden="true"></span>
+                <span id="clock">—</span>
+                <span class="meta-sep">·</span>
+                <span>Montréal</span>
             </div>
+            <button class="hamburger" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
         </div>
     </nav>
 
-    <!-- Section Hero -->
-    <section id="accueil" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <p class="subtitle">Nouveau single disponible</p>
-                <h1>PATRICK</h1>
-                <h2>Musicien & Compositeur</h2>
-                <p class="description">Découvre mon univers musical entre mélodies captivantes et rythmes entraînants.</p>
-                <div class="cta-buttons">
-                    <a href="#musique" class="btn btn-primary">Écouter ma musique</a>
-                    <a href="#contact" class="btn btn-secondary">Me contacter</a>
-                </div>
-                <div class="streaming-links">
-                    <a href="#" class="stream-btn" title="Spotify">🎵</a>
-                    <a href="#" class="stream-btn" title="Apple Music">🍎</a>
-                    <a href="#" class="stream-btn" title="YouTube">▶️</a>
-                    <a href="#" class="stream-btn" title="SoundCloud">☁️</a>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
+    <main>
 
-    <!-- Section Musique -->
-    <section id="musique" class="music">
-        <div class="container">
-            <h2 class="section-title">Ma Musique</h2>
+        <!-- ─── HERO ────────────────────────────────────────── -->
+        <section id="accueil" class="hero">
+            <div class="hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">N° 001 · Édition courante</p>
+                    <h1 class="hero-title">
+                        Un atelier pour les <em>idées</em><br>
+                        qui demandent à la fois<br>
+                        une <span class="hl">interface</span>, des <span class="hl">mots</span><br>
+                        et une <span class="hl">musique</span>.
+                    </h1>
+                    <p class="hero-lead">
+                        DeePat Studio est l'atelier de Patrick Séguin. On y conçoit des
+                        applications, des designs imprimables, des univers narratifs et de la
+                        musique — souvent les quatre à la fois, publiés sous trois noms.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="applications.html" class="btn btn-primary">
+                            <span>Voir les applications</span>
+                            <svg viewBox="0 0 16 16" width="14" height="14" aria-hidden="true"><path d="M3 8h10M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-ghost">Contact</a>
+                    </div>
+
+                    <dl class="hero-stats">
+                        <div><dt>Disciplines</dt><dd>04 / Apps · Design · Écrit · Musique</dd></div>
+                        <div><dt>Publié sous</dt><dd>03 / Studio · Patrick · SoulsGrace</dd></div>
+                        <div><dt>Atelier</dt><dd>Solo · 2026 →</dd></div>
+                    </dl>
+                </div>
+
+                <aside class="hero-card">
+                    <figure class="portrait">
+                        <img src="assets/profile.jpg" alt="Portrait de Patrick Séguin">
+                        <figcaption>
+                            <span class="mono">Patrick Séguin</span>
+                            <span class="mono dim">INTP · HSP · Polymath</span>
+                        </figcaption>
+                    </figure>
+                    <div class="hero-card-meta">
+                        <div class="meta-row"><span>Établi</span><span class="mono">2026</span></div>
+                        <div class="meta-row"><span>Disciplines</span><span class="mono">04</span></div>
+                        <div class="meta-row"><span>Statut</span><span class="mono live">● actif</span></div>
+                    </div>
+                </aside>
+            </div>
+
+            <div class="hero-foot">
+                <span class="mono dim">↓ Faire défiler</span>
+                <span class="mono dim" id="hero-foot-date">—</span>
+            </div>
+        </section>
+
+        <!-- ─── INDEX DES DISCIPLINES ───────────────────────── -->
+        <section id="index" class="section section-index">
+            <header class="sec-head">
+                <span class="sec-num mono">§ 02</span>
+                <h2>Quatre disciplines, un seul atelier.</h2>
+                <p class="sec-sub">Chacune publie sous le nom qui lui convient. L'atelier reste le même.</p>
+            </header>
+
+            <ol class="index-list">
+                <li class="index-row">
+                    <span class="row-num mono">01</span>
+                    <div class="row-body">
+                        <h3>Applications</h3>
+                        <p>Outils SaaS pensés pour des usages quotidiens précis. Trois en construction, plus à venir.</p>
+                    </div>
+                    <span class="row-tags mono">DeePat Studio</span>
+                    <a href="applications.html" class="row-arrow" aria-label="Voir les applications">→</a>
+                </li>
+                <li class="index-row">
+                    <span class="row-num mono">02</span>
+                    <div class="row-body">
+                        <h3>Designs</h3>
+                        <p>Visuels imprimés et explorations graphiques. Vendus sur Redbubble, exposés sur DeviantArt.</p>
+                    </div>
+                    <span class="row-tags mono">DeePat Studio</span>
+                    <a href="designs.html" class="row-arrow" aria-label="Voir les designs">→</a>
+                </li>
+                <li class="index-row">
+                    <span class="row-num mono">03</span>
+                    <div class="row-body">
+                        <h3>Écrits</h3>
+                        <p>Une autobiographie romanesque, une saga en six tomes, et ce qui viendra après.</p>
+                    </div>
+                    <span class="row-tags mono">Patrick Séguin</span>
+                    <a href="ecrits.html" class="row-arrow" aria-label="Voir les écrits">→</a>
+                </li>
+                <li class="index-row">
+                    <span class="row-num mono">04</span>
+                    <div class="row-body">
+                        <h3>Musique</h3>
+                        <p>Chansons sous mon nom, albums instrumentaux sous SoulsGrace. Deux territoires sonores complémentaires.</p>
+                    </div>
+                    <span class="row-tags mono">Patrick · SoulsGrace</span>
+                    <a href="musique.html" class="row-arrow" aria-label="Voir la musique">→</a>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ─── APPLICATIONS (preview) ──────────────────────── -->
+        <section id="applications" class="section section-apps">
+            <header class="sec-head split">
+                <div>
+                    <span class="sec-num mono">§ 03 · DeePat Studio</span>
+                    <h2>Applications</h2>
+                </div>
+                <a href="applications.html" class="link-arrow">Toutes les apps →</a>
+            </header>
+
+            <div class="apps-grid">
+                <article class="app-card">
+                    <div class="app-card-head">
+                        <span class="mono kicker">App · 01</span>
+                        <span class="status-pill mono"><span class="status-dot"></span>En développement</span>
+                    </div>
+                    <h3>Storilys</h3>
+                    <p>Outil d'écriture pour sagas longues. Davantage de détails à venir.</p>
+                    <div class="app-card-foot mono">
+                        <span class="dim">storilys.deepatstudio.com</span>
+                    </div>
+                </article>
+                <article class="app-card">
+                    <div class="app-card-head">
+                        <span class="mono kicker">App · 02</span>
+                        <span class="status-pill mono dim"><span class="status-dot dim"></span>Bientôt</span>
+                    </div>
+                    <h3>HealthManager</h3>
+                    <p>SaaS de suivi personnel. Annonce officielle à venir.</p>
+                    <div class="app-card-foot mono">
+                        <span class="dim">healthmanager.deepatstudio.com</span>
+                    </div>
+                </article>
+                <article class="app-card">
+                    <div class="app-card-head">
+                        <span class="mono kicker">App · 03</span>
+                        <span class="status-pill mono dim"><span class="status-dot dim"></span>Bientôt</span>
+                    </div>
+                    <h3>LuvUsAll</h3>
+                    <p>SaaS en construction. Plus d'informations à la sortie.</p>
+                    <div class="app-card-foot mono">
+                        <span class="dim">luvusall.deepatstudio.com</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ─── ÉCRITS (preview) ────────────────────────────── -->
+        <section id="ecrits" class="section section-books">
+            <header class="sec-head split">
+                <div>
+                    <span class="sec-num mono">§ 04 · Patrick Séguin</span>
+                    <h2>Écrits</h2>
+                </div>
+                <a href="ecrits.html" class="link-arrow">Tous les écrits →</a>
+            </header>
+
+            <div class="books-grid">
+                <article class="book-card feat">
+                    <div class="book-spine" aria-hidden="true">
+                        <span class="mono">Autobio · Fiction</span>
+                    </div>
+                    <div class="book-body">
+                        <span class="mono kicker">Roman · 01</span>
+                        <h3>Mile après Mile</h3>
+                        <p class="book-lead">Une autobiographie romanesque. En attente de réponse de maisons d'édition.</p>
+                        <ul class="book-meta mono">
+                            <li>Statut · Manuscrit</li>
+                            <li>Soumissions · En cours</li>
+                            <li>Format · Roman</li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="book-card feat alt">
+                    <div class="book-spine" aria-hidden="true">
+                        <span class="mono">Saga · 6 tomes</span>
+                    </div>
+                    <div class="book-body">
+                        <span class="mono kicker">Saga · 02</span>
+                        <h3>Architectes du Dernier Monde</h3>
+                        <p class="book-lead">Une saga en six tomes en construction. Tome II en bouclage.</p>
+                        <ul class="book-meta mono">
+                            <li>Tomes · 06 prévus</li>
+                            <li>État · Tome II en cours</li>
+                            <li>Univers · Storilys</li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ─── MUSIQUE (preview) ───────────────────────────── -->
+        <section id="musique" class="section section-music">
+            <header class="sec-head split">
+                <div>
+                    <span class="sec-num mono">§ 05 · Patrick Séguin · SoulsGrace</span>
+                    <h2>Musique</h2>
+                </div>
+                <a href="musique.html" class="link-arrow">Toute la musique →</a>
+            </header>
+
             <div class="music-grid">
-                <div class="music-card">
-                    <div class="album-cover">
-                        <div class="album-placeholder">🎸</div>
-                        <div class="play-overlay">
-                            <span class="play-btn">▶</span>
-                        </div>
+                <article class="music-card">
+                    <div class="music-mark" aria-hidden="true">
+                        <span>PS</span>
                     </div>
-                    <div class="music-info">
-                        <h3>Mon Premier Single</h3>
-                        <p class="music-year">2026</p>
-                        <p class="music-desc">Mon premier morceau, un mélange de pop et d'électro.</p>
-                        <div class="music-links">
-                            <a href="#" class="link">Spotify</a>
-                            <a href="#" class="link">YouTube</a>
-                        </div>
+                    <div class="music-body">
+                        <span class="mono kicker">Identité · Paroles</span>
+                        <h3>Patrick Séguin</h3>
+                        <p>Chansons écrites et chantées sous mon vrai nom. Textes, voix, mélodies.</p>
+                        <ul class="music-meta mono">
+                            <li>Format · Chansons</li>
+                            <li>Plateformes · à venir</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="music-card">
-                    <div class="album-cover">
-                        <div class="album-placeholder">🎹</div>
-                        <div class="play-overlay">
-                            <span class="play-btn">▶</span>
-                        </div>
+                </article>
+                <article class="music-card alt">
+                    <div class="music-mark" aria-hidden="true">
+                        <span>SG</span>
                     </div>
-                    <div class="music-info">
-                        <h3>Nouvel EP</h3>
-                        <p class="music-year">2026</p>
-                        <p class="music-desc">Un EP de 4 titres explorant différents styles musicaux.</p>
-                        <div class="music-links">
-                            <a href="#" class="link">Spotify</a>
-                            <a href="#" class="link">Apple Music</a>
-                        </div>
+                    <div class="music-body">
+                        <span class="mono kicker">Identité · Instrumental</span>
+                        <h3>SoulsGrace</h3>
+                        <p>Albums instrumentaux. Atmosphères, textures, pièces longues sans paroles.</p>
+                        <ul class="music-meta mono">
+                            <li>Format · Albums</li>
+                            <li>Plateformes · à venir</li>
+                        </ul>
                     </div>
-                </div>
-                <div class="music-card">
-                    <div class="album-cover">
-                        <div class="album-placeholder">🎤</div>
-                        <div class="play-overlay">
-                            <span class="play-btn">▶</span>
-                        </div>
-                    </div>
-                    <div class="music-info">
-                        <h3>Cover Acoustique</h3>
-                        <p class="music-year">2026</p>
-                        <p class="music-desc">Reprises de mes morceaux préférés en version acoustique.</p>
-                        <div class="music-links">
-                            <a href="#" class="link">YouTube</a>
-                            <a href="#" class="link">SoundCloud</a>
-                        </div>
-                    </div>
-                </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Concerts -->
-    <section id="concerts" class="concerts">
-        <div class="container">
-            <h2 class="section-title">Concerts & Événements</h2>
-            <div class="concerts-list">
-                <div class="concert-item">
-                    <div class="concert-date">
-                        <span class="date-day">15</span>
-                        <span class="date-month">JUIN</span>
-                    </div>
-                    <div class="concert-info">
-                        <h3>Festival de Musique Locale</h3>
-                        <p>📍 Paris, France</p>
-                    </div>
-                    <a href="#" class="btn btn-small">Infos</a>
+        <!-- ─── DESIGNS (preview) ───────────────────────────── -->
+        <section id="designs" class="section section-designs">
+            <header class="sec-head split">
+                <div>
+                    <span class="sec-num mono">§ 06 · DeePat Studio</span>
+                    <h2>Designs</h2>
                 </div>
-                <div class="concert-item">
-                    <div class="concert-date">
-                        <span class="date-day">22</span>
-                        <span class="date-month">JUIL</span>
+                <a href="designs.html" class="link-arrow">Tous les designs →</a>
+            </header>
+
+            <div class="design-grid">
+                <a class="design-card" href="https://www.redbubble.com" target="_blank" rel="noopener">
+                    <div class="dc-head">
+                        <span class="mono kicker">Boutique · Imprimé</span>
+                        <span class="mono ext">↗</span>
                     </div>
-                    <div class="concert-info">
-                        <h3>Concert en Plein Air</h3>
-                        <p>📍 Lyon, France</p>
+                    <h3>Redbubble</h3>
+                    <p>Designs imprimés sur t-shirts, posters, accessoires et décorations.</p>
+                    <ul class="dc-meta mono">
+                        <li>Print on demand</li>
+                        <li>Worldwide</li>
+                        <li>Updated 2026</li>
+                    </ul>
+                </a>
+                <a class="design-card alt" href="https://www.deviantart.com" target="_blank" rel="noopener">
+                    <div class="dc-head">
+                        <span class="mono kicker">Galerie · Explorations</span>
+                        <span class="mono ext">↗</span>
                     </div>
-                    <a href="#" class="btn btn-small">Infos</a>
-                </div>
-                <div class="concert-item">
-                    <div class="concert-date">
-                        <span class="date-day">05</span>
-                        <span class="date-month">AOÛT</span>
-                    </div>
-                    <div class="concert-info">
-                        <h3>Open Mic Night</h3>
-                        <p>📍 Marseille, France</p>
-                    </div>
-                    <a href="#" class="btn btn-small">Infos</a>
-                </div>
+                    <h3>DeviantArt</h3>
+                    <p>Travaux artistiques, séries graphiques, recherches visuelles.</p>
+                    <ul class="dc-meta mono">
+                        <li>Galerie</li>
+                        <li>Séries</li>
+                        <li>Recherches</li>
+                    </ul>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section À propos -->
-    <section id="apropos" class="about">
-        <div class="container">
-            <h2 class="section-title">À propos</h2>
-            <div class="about-content">
-                <div class="about-image">
-                    <img class="artist-photo" src="profile.jpg" alt="Patrick">
+        <!-- ─── JOURNAL (preview) ───────────────────────────── -->
+        <section id="journal" class="section section-journal">
+            <header class="sec-head split">
+                <div>
+                    <span class="sec-num mono">§ 07</span>
+                    <h2>Journal de l'atelier</h2>
+                </div>
+                <a href="journal.html" class="link-arrow">Toutes les notes →</a>
+            </header>
+
+            <ol class="journal-list">
+                <li class="journal-entry">
+                    <div class="je-meta">
+                        <span class="mono date">2026 · 05 · 06</span>
+                        <span class="mono tag">Atelier</span>
+                    </div>
+                    <h3>L'atelier prend sa vraie forme — quatre disciplines assumées</h3>
+                    <p>Le site grandit pour accueillir tout ce que je fais : applications, designs, écrits et musique. Trois noms, un seul atelier.</p>
+                </li>
+                <li class="journal-entry">
+                    <div class="je-meta">
+                        <span class="mono date">2026 · 04 · 22</span>
+                        <span class="mono tag">Design</span>
+                    </div>
+                    <h3>Une nouvelle série pour Redbubble — palette nocturne</h3>
+                    <p>Quatre pièces, une seule palette tirée de l'aube. Le cuivre tient particulièrement bien sur les fonds sombres en impression directe.</p>
+                </li>
+                <li class="journal-entry">
+                    <div class="je-meta">
+                        <span class="mono date">2026 · 04 · 03</span>
+                        <span class="mono tag">Atelier</span>
+                    </div>
+                    <h3>Pourquoi l'atelier s'appelle DeePat</h3>
+                    <p>Une contraction&nbsp;: <em>Dee</em> pour "The", <em>Pat</em> pour Patrick. Un nom qui assume le côté studio personnel — pas une marque marketing, un nom qui tient.</p>
+                </li>
+                <li class="journal-entry">
+                    <div class="je-meta">
+                        <span class="mono date">2026 · 03 · 14</span>
+                        <span class="mono tag">Récit</span>
+                    </div>
+                    <h3>Architectes du Dernier Monde — bouclage du tome II</h3>
+                    <p>17 chapitres, 9 beats par chapitre, 4 fils ouverts. La saga avance sans que le canon ne dérive.</p>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ─── À PROPOS ────────────────────────────────────── -->
+        <section id="apropos" class="section section-about">
+            <div class="about-grid">
+                <div class="about-side">
+                    <span class="sec-num mono">§ 08</span>
+                    <h2>À propos</h2>
                 </div>
                 <div class="about-text">
-                    <p>Je suis Patrick, musicien passionné et compositeur. Ma musique est un mélange de styles variés, influencée par la pop, le rock et l'électro.</p>
-                    <p>Je compose, écris et produis mes propres morceaux depuis plusieurs années. Mon objectif est de créer des chansons qui résonnent avec les gens et qui racontent des histoires.</p>
-                    <p>Rejoins-moi dans cette aventure musicale et découvre mon univers !</p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <span class="stat-number">10+</span>
-                            <span class="stat-label">Morceaux</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Concerts</span>
-                        </div>
-                        <div class="stat">
-                            <span class="stat-number">1000+</span>
-                            <span class="stat-label">Écoutes</span>
-                        </div>
-                    </div>
+                    <p class="lead">
+                        Je suis Patrick Séguin. <em>INTP</em>, <em>hypersensible</em>, <em>polymath</em> — ce qui
+                        veut dire en clair que je touche à beaucoup de choses, profondément, et que
+                        je ressens tout un peu plus fort que la moyenne. Ça explique le reste du site.
+                    </p>
+                    <p>
+                        DeePat Studio est l'atelier où je rassemble ce que je fabrique&nbsp;: des
+                        applications de précision, des univers narratifs, de la musique, des designs.
+                        Trois noms publient ce travail&nbsp;: <strong>DeePat Studio</strong> pour les apps et les
+                        designs, <strong>Patrick Séguin</strong> pour les romans et les chansons, <strong>SoulsGrace</strong>
+                        pour les albums instrumentaux.
+                    </p>
+                    <p>
+                        L'atelier est volontairement petit. Il livre peu, mais ce qu'il livre
+                        est pensé pour durer plus qu'une saison.
+                    </p>
+
+                    <ul class="about-facts">
+                        <li>
+                            <span class="mono dim">Profil</span>
+                            <strong>INTP · HSP · Polymath</strong>
+                        </li>
+                        <li>
+                            <span class="mono dim">Fait à</span>
+                            <strong>Montréal, en solo</strong>
+                        </li>
+                        <li>
+                            <span class="mono dim">Établi</span>
+                            <strong>2026 — atelier en cours</strong>
+                        </li>
+                        <li>
+                            <span class="mono dim">Posture</span>
+                            <strong>Lent, dense, soigné</strong>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Section Contact -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact & Booking</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <p>Tu veux booker un concert, collaborer ou simplement discuter musique ? Contacte-moi !</p>
-                    <div class="contact-links">
-                        <a href="mailto:patrick.musique@example.com" class="contact-item">
-                            <span class="contact-icon">📧</span>
-                            <span>patrick.musique@example.com</span>
-                        </a>
-                        <a href="https://instagram.com" target="_blank" class="contact-item">
-                            <span class="contact-icon">📷</span>
-                            <span>Instagram</span>
-                        </a>
-                        <a href="https://youtube.com" target="_blank" class="contact-item">
-                            <span class="contact-icon">▶️</span>
-                            <span>YouTube</span>
-                        </a>
-                        <a href="https://spotify.com" target="_blank" class="contact-item">
-                            <span class="contact-icon">🎵</span>
-                            <span>Spotify</span>
-                        </a>
-                    </div>
-                </div>
+        <!-- ─── CONTACT ─────────────────────────────────────── -->
+        <section id="contact" class="section section-contact">
+            <div class="contact-inner">
+                <span class="sec-num mono">§ 09</span>
+                <h2 class="contact-h">
+                    Pour une démo, une commande visuelle, un échange éditorial,<br>
+                    ou simplement <em>parler du projet.</em>
+                </h2>
+                <a href="mailto:contact@deepatstudio.com" class="contact-mail">
+                    contact@deepatstudio.com
+                    <svg viewBox="0 0 16 16" width="22" height="22" aria-hidden="true"><path d="M3 8h10M9 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+                </a>
+                <ul class="contact-grid">
+                    <li><a href="https://github.com/patricks77" target="_blank" rel="noopener"><span class="mono dim">01</span><span>GitHub</span><span class="ext">↗</span></a></li>
+                    <li><a href="https://www.redbubble.com" target="_blank" rel="noopener"><span class="mono dim">02</span><span>Redbubble</span><span class="ext">↗</span></a></li>
+                    <li><a href="https://www.deviantart.com" target="_blank" rel="noopener"><span class="mono dim">03</span><span>DeviantArt</span><span class="ext">↗</span></a></li>
+                    <li><a href="mailto:contact@deepatstudio.com"><span class="mono dim">04</span><span>Email direct</span><span class="ext">↗</span></a></li>
+                </ul>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <p>© 2026 Patrick. Tous droits réservés.</p>
-            <p>Fait avec 🎵 et beaucoup de passion</p>
-            <div class="footer-links">
-                <a href="#">Spotify</a>
-                <a href="#">Apple Music</a>
-                <a href="#">YouTube</a>
-                <a href="#">Instagram</a>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="22" height="22"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="3" fill="currentColor"/></svg>
+                </span>
+                <div>
+                    <strong>DeePat Studio</strong><br>
+                    <span class="mono dim">Atelier de Patrick Séguin · Établi 2026</span>
+                </div>
             </div>
+            <nav class="footer-nav" aria-label="Navigation pied de page">
+                <a href="applications.html">Applications</a>
+                <a href="designs.html">Designs</a>
+                <a href="ecrits.html">Écrits</a>
+                <a href="musique.html">Musique</a>
+                <a href="journal.html">Journal</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <p class="footer-legal mono dim">
+                © 2026 DeePat Studio. Tous droits réservés.<br>
+                Fait à la main, à Montréal.
+            </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
+    <script src="tweaks.js"></script>
 </body>
 </html>

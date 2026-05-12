@@ -4,7 +4,7 @@ export const navItems = [
   { label: "Musique", href: "/musique/" },
   { label: "Designs", href: "/designs/" },
   { label: "Journal", href: "/journal/" },
-  { label: "Studio", href: "/studio/" }
+  { label: "Studio", href: "/#studio" }
 ];
 
 export const disciplines = [

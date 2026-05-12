@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { disciplines } from "../data/siteData";
+import { disciplines, contactLinks } from "../data/siteData";
 
 const icons: Record<string, string> = {
   apps: "⚡",
@@ -28,7 +28,7 @@ const glowColors: Record<string, string> = {
       </p>
       <div class="hero-actions hero-animate">
         <a class="button primary" href="/applications/">Voir les travaux</a>
-        <a class="button quiet" href="/studio/">Le studio</a>
+        <a class="button quiet" href="/#studio">Le studio</a>
       </div>
       <ul class="trait-line hero-animate" aria-label="Traits du studio">
         <li>INTP · structure</li>
@@ -36,8 +36,6 @@ const glowColors: Record<string, string> = {
         <li>Polymath · connexions</li>
       </ul>
     </div>
-
-
   </section>
 
   <section class="section portal-section reveal">
@@ -65,12 +63,54 @@ const glowColors: Record<string, string> = {
         <p>Carnet de bord du studio</p>
         <div class="card-icon">✎</div>
       </a>
-      <a class="portal-card soft reveal reveal-delay-3" href="/studio/">
+      <a class="portal-card soft reveal reveal-delay-3" href="/#studio">
         <span>DeePat Studio</span>
         <h3>Studio</h3>
         <p>Fondateur, méthode, contact</p>
         <div class="card-icon">◉</div>
       </a>
     </div>
+  </section>
+
+  <section id="studio" class="section studio-section reveal">
+    <figure>
+      <img src="/assets/profile.jpg" alt="Portrait de Patrick Séguin" />
+      <figcaption>Patrick Séguin · Fondateur · Créateur polymathe</figcaption>
+    </figure>
+    <div>
+      <p class="eyebrow">Patrick Séguin</p>
+      <h2>Structure, intuition, chantier long.</h2>
+      <p class="large">
+        Je travaille à la jonction des systèmes, des récits, des images et du son, avec une manière
+        très personnelle de construire: beaucoup de structure, beaucoup d'intuition, et une patience
+        de chantier long.
+      </p>
+      <p>
+        Le studio avance comme un laboratoire sensible et méthodique: tests, itérations, outils d'IA
+        comme partenaires, et une obsession simple: fabriquer des choses qui tiennent dans le temps.
+      </p>
+      <ul class="studio-facts">
+        <li><span>Profil</span><strong>Fondateur · créateur polymathe</strong></li>
+        <li><span>Fait à</span><strong>Montréal, en solo</strong></li>
+        <li><span>Établi</span><strong>2026 · studio en construction</strong></li>
+        <li><span>Posture</span><strong>Sensible, systémique, itérative</strong></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact-section reveal">
+    <p class="eyebrow">Contact</p>
+    <h2>Pour une démo, une collaboration, une commande visuelle, ou simplement ouvrir une bonne conversation.</h2>
+    <a class="contact-mail" href="mailto:contact@deepatstudio.com">contact@deepatstudio.com</a>
+    <ul class="contact-links">
+      {contactLinks.map((link, index) => (
+        <li>
+          <a href={link.href} target={link.href.startsWith("http") ? "_blank" : undefined} rel={link.href.startsWith("http") ? "noopener" : undefined}>
+            <span>{String(index + 1).padStart(2, "0")}</span>
+            {link.label}
+          </a>
+        </li>
+      ))}
+    </ul>
   </section>
 </BaseLayout>

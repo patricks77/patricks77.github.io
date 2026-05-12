@@ -7,12 +7,14 @@ type Props = {
   title?: string;
   description?: string;
   current?: string;
+  bgImage?: string;
 };
 
 const {
   title = "DeePat Studio — Studio indépendant à Montréal",
   description = "DeePat Studio — studio indépendant à Montréal. Applications, design, écriture et musique.",
-  current = ""
+  current = "",
+  bgImage = ""
 } = Astro.props;
 ---
 
@@ -33,6 +35,9 @@ const {
   </head>
   <body>
     <div class="ambient-grid" aria-hidden="true"></div>
+    {bgImage && (
+      <div class="page-bg" style={`background-image: url('${bgImage}');`} aria-hidden="true"></div>
+    )}
     <Navigation current={current} />
     <main>
       <slot />

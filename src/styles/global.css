@@ -46,8 +46,7 @@ body {
   background:
     radial-gradient(ellipse at 20% 0%, rgba(245, 182, 101, 0.06), transparent 55%),
     radial-gradient(ellipse at 80% 10%, rgba(91, 210, 208, 0.05), transparent 50%),
-    radial-gradient(ellipse at 50% 0%, rgba(255, 143, 79, 0.04), transparent 48%),
-    linear-gradient(180deg, #0a0907 0, var(--bg) 30%, #0f0d0b 100%);
+    radial-gradient(ellipse at 50% 0%, rgba(255, 143, 79, 0.04), transparent 48%);
   font-family: var(--sans);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -96,15 +95,16 @@ ol {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 0.35;
-  mix-blend-mode: soft-light;
+  opacity: 0.45;
 }
 
 .page-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, var(--bg) 0%, transparent 25%, transparent 75%, var(--bg) 100%);
+  background:
+    linear-gradient(180deg, var(--bg) 0%, transparent 15%, transparent 85%, var(--bg) 100%),
+    rgba(12, 11, 9, 0.55);
 }
 
 /* ===== Scroll reveal animations ===== */

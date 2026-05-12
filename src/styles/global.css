@@ -1138,6 +1138,20 @@ h2 {
   letter-spacing: 0.08em;
 }
 
+.admin-trigger {
+  display: inline-block;
+  margin-left: 6px;
+  color: var(--dim);
+  font-size: 1.2rem;
+  line-height: 1;
+  vertical-align: middle;
+  transition: color 200ms ease;
+}
+
+.admin-trigger:hover {
+  color: var(--gold);
+}
+
 /* ===== Page hero ===== */
 .page-hero {
   padding-top: clamp(52px, 8vw, 110px);

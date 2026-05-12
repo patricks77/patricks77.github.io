@@ -1,0 +1,8 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import AdminPanel from "../components/AdminPanel.jsx";
+---
+
+<BaseLayout title="Admin · DeePat Studio" description="Interface d'administration du journal.">
+  <AdminPanel client:only="react" />
+</BaseLayout>

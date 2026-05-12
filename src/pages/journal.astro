@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import { journalEntries } from "../data/siteData";
+import { getCollection } from "astro:content";
+
+const entries = await getCollection("journal");
+const sorted = entries.sort((a, b) => b.id.localeCompare(a.id));
 
 const tagColors: Record<string, string> = {
   Studio: "var(--gold)",
@@ -25,14 +28,14 @@ const tagColors: Record<string, string> = {
 
   <section class="section">
     <ol class="journal-list full">
-      {journalEntries.map((entry, index) => (
+      {sorted.map((entry, index) => (
         <li class="reveal" style={`transition-delay: ${Math.min(index * 0.08, 0.4)}s;`}>
           <div>
-            <span>{entry.date}</span>
-            <small style={`border-color: ${tagColors[entry.tag] || 'var(--line)'}; color: ${tagColors[entry.tag] || 'var(--text-soft)'};`}>{entry.tag}</small>
+            <span>{entry.data.date}</span>
+            <small style={`border-color: ${tagColors[entry.data.tag] || 'var(--line)'}; color: ${tagColors[entry.data.tag] || 'var(--text-soft)'};`}>{entry.data.tag}</small>
           </div>
-          <h2>{entry.title}</h2>
-          <p>{entry.excerpt}</p>
+          <h2>{entry.data.title}</h2>
+          <p>{entry.body?.trim() || ""}</p>
         </li>
       ))}
     </ol>

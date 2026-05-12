@@ -206,11 +206,16 @@ main {
 
 .hero-section {
   display: grid;
-  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 1fr);
   gap: clamp(28px, 5vw, 64px);
   align-items: center;
   min-height: min(860px, calc(100svh - 76px));
   padding-block: clamp(34px, 6vw, 74px);
+}
+
+.home-hero {
+  min-height: auto;
+  padding-bottom: clamp(28px, 5vw, 58px);
 }
 
 .hero-copy {
@@ -242,10 +247,10 @@ h2 {
 }
 
 .hero-copy h1 {
-  max-width: 12ch;
+  max-width: 14ch;
   margin-bottom: 22px;
-  font-size: clamp(2.9rem, 5.5vw, 5rem);
-  line-height: 0.92;
+  font-size: clamp(2.75rem, 5vw, 4.45rem);
+  line-height: 0.94;
   text-wrap: balance;
 }
 
@@ -257,6 +262,25 @@ h2 {
   max-width: 58ch;
   color: var(--text-soft);
   font-size: clamp(1rem, 1.3vw, 1.18rem);
+}
+
+.trait-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+}
+
+.trait-line li {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 7px 10px;
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.025);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
 }
 
 .hero-actions,
@@ -346,6 +370,64 @@ h2 {
   font-size: 0.76rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
+
+.portal-section {
+  padding-top: clamp(34px, 5vw, 72px);
+}
+
+.portal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--line);
+}
+
+.portal-card {
+  min-height: 250px;
+  padding: clamp(22px, 3vw, 34px);
+  background:
+    linear-gradient(145deg, rgba(91, 210, 208, 0.08), transparent 48%),
+    rgba(25, 23, 19, 0.88);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.portal-card:hover {
+  background:
+    linear-gradient(145deg, rgba(245, 182, 101, 0.1), transparent 48%),
+    var(--surface);
+}
+
+.portal-card span {
+  color: var(--gold);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.portal-card h3 {
+  margin: 54px 0 10px;
+  font-family: var(--display);
+  font-size: clamp(2.2rem, 4vw, 4rem);
+  font-weight: 400;
+  line-height: 0.95;
+}
+
+.portal-card p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.portal-card.soft {
+  background:
+    linear-gradient(145deg, rgba(245, 182, 101, 0.07), transparent 50%),
+    rgba(25, 23, 19, 0.78);
 }
 
 .section {
@@ -1096,6 +1178,7 @@ h2 {
   }
 
   .hero-rhythm,
+  .portal-grid,
   .ecosystem-grid,
   .cards.three,
   .contact-links {
@@ -1160,6 +1243,7 @@ h2 {
   }
 
   .hero-rhythm,
+  .portal-grid,
   .ecosystem-grid,
   .cards.two,
   .cards.three,

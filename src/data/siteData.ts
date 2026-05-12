@@ -1,10 +1,10 @@
 export const navItems = [
   { label: "Applications", href: "/applications/" },
-  { label: "Designs", href: "/designs/" },
   { label: "Écrits", href: "/ecrits/" },
   { label: "Musique", href: "/musique/" },
+  { label: "Designs", href: "/designs/" },
   { label: "Journal", href: "/journal/" },
-  { label: "Contact", href: "/#contact" }
+  { label: "Studio", href: "/studio/" }
 ];
 
 export const disciplines = [

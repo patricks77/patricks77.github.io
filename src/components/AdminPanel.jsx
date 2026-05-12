@@ -263,9 +263,10 @@ export default function AdminPanel() {
             }}
           >
             <option>Studio</option>
+            <option>Applications</option>
             <option>Design</option>
             <option>Musique</option>
-            <option>Écrit</option>
+            <option>Écrits</option>
             <option>Récit</option>
           </select>
         </div>

@@ -1,6 +1,6 @@
 ---
 date: "2026 · 01 · 30"
-tag: "Écrit"
+tag: "Écrits"
 title: "Mile après Mile — soumissions envoyées"
 ---
 

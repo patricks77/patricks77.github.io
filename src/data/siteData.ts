@@ -3,8 +3,7 @@ export const navItems = [
   { label: "Écrits", href: "/ecrits/" },
   { label: "Musique", href: "/musique/" },
   { label: "Designs", href: "/designs/" },
-  { label: "Journal", href: "/journal/" },
-  { label: "Studio", href: "/#studio" }
+  { label: "Journal", href: "/journal/" }
 ];
 
 export const disciplines = [

@@ -54,7 +54,7 @@ revealItems.forEach((el) => io.observe(el));
 function pad(n) { return String(n).padStart(2, "0"); }
 function tick() {
     const now = new Date();
-    const t = `${pad(now.getHours())}:${pad(now.getMinutes())} EST`;
+    const t = `${pad(now.getHours())}:${pad(now.getMinutes())} MTL`;
     const c = document.getElementById("clock");
     if (c) c.textContent = t;
 

@@ -1,0 +1,20 @@
+---
+import { navItems } from "../data/siteData";
+---
+
+<footer class="site-footer">
+  <div>
+    <a class="brand footer-brand" href="/" aria-label="Accueil DeePat Studio">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">
+        <strong>DeePat</strong>
+        <em>Studio</em>
+      </span>
+    </a>
+    <p>Studio indépendant · Montréal · Établi 2026</p>
+  </div>
+  <nav aria-label="Navigation pied de page">
+    {navItems.map((item) => <a href={item.href}>{item.label}</a>)}
+  </nav>
+  <p class="footer-note">© 2026 DeePat Studio. Tous droits réservés.<br />Fait à la main, à Montréal.</p>
+</footer>

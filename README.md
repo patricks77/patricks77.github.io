@@ -1,46 +1,26 @@
-# patricks77.github.io
+# DeePat Studio
 
-Mon site web musical / artiste hébergé sur GitHub Pages.
+Site officiel de DeePat Studio, studio indépendant à Montréal fondé par Patrick Séguin.
 
-## 🎵 À propos
+Le site est construit avec Astro + React et déployé sur GitHub Pages avec le domaine `deepatstudio.com`.
 
-Site officiel de Patrick - musicien et compositeur.
+## Développement
 
-## 🚀 Technologies utilisées
+```bash
+npm install
+npm run dev
+```
 
-- HTML5 sémantique
-- CSS3 moderne (Grid, Flexbox, animations)
-- JavaScript vanilla (ES6+)
-- Design responsive (mobile-first)
+## Build
 
-## ✨ Fonctionnalités
+```bash
+npm run build
+```
 
-- Design moderne avec ambiance musicale
-- Animations de notes flottantes
-- Section musique avec lecteurs
-- Calendrier des concerts
-- Liens vers plateformes de streaming
-- Navigation responsive
+La build statique est générée dans `dist/`.
 
-## 🌐 Lien du site
+## Déploiement
 
-[https://patricks77.github.io](https://patricks77.github.io)
+Le workflow `.github/workflows/deploy.yml` publie automatiquement le site sur GitHub Pages lors des pushes sur `main`.
 
-## 📝 Personnalisation
-
-Pour modifier le contenu :
-1. Éditer `index.html` pour le contenu (titres, descriptions, concerts)
-2. Éditer `style.css` pour les styles et couleurs
-3. Éditer `script.js` pour les interactions
-
-## 🔗 Plateformes à connecter
-
-- Spotify
-- Apple Music
-- YouTube Music
-- SoundCloud
-- Instagram
-
-## 📄 Licence
-
-Ce projet est sous licence MIT.
+Le fichier `public/CNAME` conserve le domaine personnalisé.

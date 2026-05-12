@@ -1,0 +1,35 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { musicIdentities } from "../data/siteData";
+---
+
+<BaseLayout title="Musique · Patrick Séguin · SoulsGrace" description="Musique de Patrick Séguin et SoulsGrace — chansons et albums instrumentaux." current="Musique">
+  <section class="page-hero">
+    <a class="back-link" href="/">Retour au studio</a>
+    <p class="eyebrow">Musique · Signatures sonores</p>
+    <h1>Deux noms, deux territoires, un même studio intérieur.</h1>
+    <p>
+      Sous Patrick Séguin, les chansons portent les mots, la voix et la mélodie. Sous SoulsGrace,
+      les albums instrumentaux ouvrent des espaces sans paroles. Les deux signatures restent
+      reliées à DeePat Studio par la même approche de création.
+    </p>
+  </section>
+
+  <section class="section music-section">
+    {musicIdentities.map((music) => (
+      <article class="music-feature">
+        <div class="music-mark" aria-hidden="true">{music.mark}</div>
+        <div>
+          <p class="eyebrow">{music.kicker}</p>
+          <h2>{music.title}</h2>
+          <p class="large">{music.description}</p>
+          <ul class="tag-row">{music.meta.map((tag) => <li>{tag}</li>)}</ul>
+        </div>
+      </article>
+    ))}
+    <div class="quiet-note">
+      <span>Discographie</span>
+      <p>Les albums et singles apparaîtront ici dès leur mise en ligne sur les plateformes de streaming.</p>
+    </div>
+  </section>
+</BaseLayout>

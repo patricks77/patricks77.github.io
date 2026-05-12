@@ -1,0 +1,32 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { journalEntries } from "../data/siteData";
+---
+
+<BaseLayout title="Journal · DeePat Studio" description="Journal de DeePat Studio — notes de Patrick Séguin." current="Journal">
+  <section class="page-hero">
+    <a class="back-link" href="/">Retour au studio</a>
+    <p class="eyebrow">Journal du studio</p>
+    <h1>Le carnet de bord du studio.</h1>
+    <p>
+      Ce que DeePat Studio construit, teste, apprend et ajuste. Pas un blog commercial: un carnet
+      ouvert sur le travail réel, les décisions, les chantiers et les liens entre apps, design,
+      écriture et musique.
+    </p>
+  </section>
+
+  <section class="section">
+    <ol class="journal-list full">
+      {journalEntries.map((entry) => (
+        <li>
+          <div>
+            <span>{entry.date}</span>
+            <small>{entry.tag}</small>
+          </div>
+          <h2>{entry.title}</h2>
+          <p>{entry.excerpt}</p>
+        </li>
+      ))}
+    </ol>
+  </section>
+</BaseLayout>

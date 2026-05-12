@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { designLinks } from "../data/siteData";
+---
+
+<BaseLayout title="Designs · DeePat Studio" description="Designs de DeePat Studio — Redbubble et DeviantArt." current="Designs">
+  <section class="page-hero">
+    <a class="back-link" href="/">Retour au studio</a>
+    <p class="eyebrow">Designs · Langage visuel</p>
+    <h1>Des signes imprimables, des textures et des séries.</h1>
+    <p>
+      La branche visuelle de DeePat Studio sert à tester des palettes, des symboles, des motifs
+      et des objets. Certaines pièces deviennent des produits imprimés, d'autres restent des
+      recherches visibles.
+    </p>
+  </section>
+
+  <section class="section">
+    <div class="cards two">
+      {designLinks.map((link) => (
+        <a class="project-card link-card" href={link.href} target="_blank" rel="noopener">
+          <span>{link.kicker}</span>
+          <h2>{link.title}</h2>
+          <p>{link.description}</p>
+          <ul class="tag-row">{link.meta.map((tag) => <li>{tag}</li>)}</ul>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

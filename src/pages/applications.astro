@@ -1,0 +1,42 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { applications } from "../data/siteData";
+---
+
+<BaseLayout title="Applications · DeePat Studio" description="Applications de DeePat Studio — outils numériques conçus par Patrick Séguin." current="Applications">
+  <section class="page-hero">
+    <a class="back-link" href="/">Retour au studio</a>
+    <p class="eyebrow">Applications · Laboratoire produit</p>
+    <h1>Des outils maison pour des usages réels.</h1>
+    <p>
+      DeePat Studio construit ses applications comme des systèmes de travail: utiles, structurés,
+      économes et capables d'évoluer. Certaines choses restent discrètes avant leur lancement,
+      mais la direction est claire: transformer des problèmes concrets en outils durables.
+    </p>
+    <p>
+      Si vous avez besoin d'une application mobile, d'un outil web ou d'un système numérique dans
+      cet esprit, vous pouvez me contacter pour en discuter.
+    </p>
+    <a class="button primary" href="/#contact">Discuter d'un projet</a>
+  </section>
+
+  <section class="section">
+    <div class="cards three">
+      {applications.map((app) => (
+        <article class="project-card">
+          <div class="card-top">
+            <span>{app.status}</span>
+            <small>{app.url}</small>
+          </div>
+          <h2>{app.title}</h2>
+          <p>{app.description}</p>
+          <ul class="tag-row">{app.meta.map((tag) => <li>{tag}</li>)}</ul>
+        </article>
+      ))}
+    </div>
+    <div class="quiet-note">
+      <span>À venir</span>
+      <p>Les prochaines fiches ajouteront captures, roadmaps et notes de conception quand les produits seront prêts à être montrés.</p>
+    </div>
+  </section>
+</BaseLayout>

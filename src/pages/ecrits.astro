@@ -1,0 +1,49 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { books } from "../data/siteData";
+---
+
+<BaseLayout title="Écrits · Patrick Séguin · DeePat Studio" description="Écrits de Patrick Séguin — Mile après Mile, Architectes du Dernier Monde, et plus." current="Écrits">
+  <section class="page-hero">
+    <a class="back-link" href="/">Retour au studio</a>
+    <p class="eyebrow">Écrits · Signature Patrick Séguin</p>
+    <h1>Des livres comme des mondes, pas comme des à-côtés.</h1>
+    <p>
+      Les écrits paraissent sous mon vrai nom, mais ils font partie de l'écosystème DeePat Studio:
+      même discipline, même exigence, même besoin de construire sur plusieurs années.
+    </p>
+    <div class="page-meta">
+      <span>02 projets actifs</span>
+      <span>06 tomes prévus</span>
+      <span>Soumissions en cours</span>
+    </div>
+  </section>
+
+  <section class="section book-section">
+    {books.map((book, index) => (
+      <article class:list={["book-feature", index % 2 ? "reverse" : ""]}>
+        <div class="book-cover" aria-hidden="true">
+          <span>{book.title}</span>
+          <small>{book.kicker}</small>
+        </div>
+        <div>
+          <p class="eyebrow">{book.kicker}</p>
+          <h2>{book.title}</h2>
+          <p class="large">{book.description}</p>
+          <dl class="meta-grid">
+            {book.meta.map(([label, value]) => (
+              <div>
+                <dt>{label}</dt>
+                <dd>{value}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </article>
+    ))}
+    <div class="quiet-note">
+      <span>À venir</span>
+      <p>D'autres écrits sont en gestation. Nouvelles, essais, possibles spin-offs de la saga.</p>
+    </div>
+  </section>
+</BaseLayout>

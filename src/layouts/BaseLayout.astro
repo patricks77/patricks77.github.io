@@ -38,5 +38,38 @@ const {
       <slot />
     </main>
     <Footer />
+
+    <script>
+      // Scroll reveal animation
+      const revealElements = document.querySelectorAll('.reveal');
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.08,
+        rootMargin: '0px 0px -40px 0px'
+      });
+
+      revealElements.forEach(el => revealObserver.observe(el));
+
+      // Hero load animation
+      const heroElements = document.querySelectorAll('.hero-animate');
+      heroElements.forEach((el, i) => {
+        const htmlEl = el as HTMLElement;
+        htmlEl.style.opacity = '0';
+        htmlEl.style.transform = 'translateY(20px)';
+        htmlEl.style.transition = `opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.12}s, transform 0.8s cubic-bezier(0.22, 1, 0.36, 1) ${i * 0.12}s`;
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            htmlEl.style.opacity = '1';
+            htmlEl.style.transform = 'translateY(0)';
+          }, 50);
+        });
+      });
+    </script>
   </body>
 </html>

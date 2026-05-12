@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { designLinks } from "../data/siteData";
+
+const designIcons = ["◆", "◈"];
+const designColors = ["var(--gold)", "var(--rose)"];
 ---
 
 <BaseLayout title="Designs · DeePat Studio" description="Designs de DeePat Studio — Redbubble et DeviantArt." current="Designs">
@@ -17,10 +20,15 @@ import { designLinks } from "../data/siteData";
 
   <section class="section">
     <div class="cards two">
-      {designLinks.map((link) => (
-        <a class="project-card link-card" href={link.href} target="_blank" rel="noopener">
-          <span>{link.kicker}</span>
-          <h2>{link.title}</h2>
+      {designLinks.map((link, index) => (
+        <a class="project-card link-card reveal" href={link.href} target="_blank" rel="noopener" style={`border-top: 2px solid ${designColors[index]};`}>
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <span>{link.kicker}</span>
+            <div style={`width: 40px; height: 40px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); display: grid; place-items: center; font-size: 1.2rem; color: ${designColors[index]};`}>
+              {designIcons[index]}
+            </div>
+          </div>
+          <h2 style="margin-top: 20px;">{link.title}</h2>
           <p>{link.description}</p>
           <ul class="tag-row">{link.meta.map((tag) => <li>{tag}</li>)}</ul>
         </a>

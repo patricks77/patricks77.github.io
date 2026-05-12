@@ -1,6 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { applications } from "../data/siteData";
+
+const appIcons = ["◈", "◇", "◉"];
+const appColors = ["var(--teal)", "var(--gold)", "var(--rose)"];
 ---
 
 <BaseLayout title="Applications · DeePat Studio" description="Applications de DeePat Studio — outils numériques conçus par Patrick Séguin." current="Applications">
@@ -17,24 +20,29 @@ import { applications } from "../data/siteData";
       Si vous avez besoin d'une application mobile, d'un outil web ou d'un système numérique dans
       cet esprit, vous pouvez me contacter pour en discuter.
     </p>
-    <a class="button primary" href="/#contact">Discuter d'un projet</a>
+    <a class="button primary" href="/studio/#contact">Discuter d'un projet</a>
   </section>
 
   <section class="section">
     <div class="cards three">
-      {applications.map((app) => (
-        <article class="project-card">
+      {applications.map((app, index) => (
+        <article class="project-card reveal" style={`border-top: 2px solid ${appColors[index]};`}>
           <div class="card-top">
             <span>{app.status}</span>
             <small>{app.url}</small>
           </div>
-          <h2>{app.title}</h2>
-          <p>{app.description}</p>
+          <div style="display: flex; align-items: center; gap: 12px; margin-top: 18px;">
+            <div style={`width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.04); border: 1px solid var(--line); display: grid; place-items: center; font-size: 1.3rem; color: ${appColors[index]};`}>
+              {appIcons[index]}
+            </div>
+            <h2 style="margin: 0;">{app.title}</h2>
+          </div>
+          <p style="margin-top: 16px;">{app.description}</p>
           <ul class="tag-row">{app.meta.map((tag) => <li>{tag}</li>)}</ul>
         </article>
       ))}
     </div>
-    <div class="quiet-note">
+    <div class="quiet-note reveal">
       <span>À venir</span>
       <p>Les prochaines fiches ajouteront captures, roadmaps et notes de conception quand les produits seront prêts à être montrés.</p>
     </div>

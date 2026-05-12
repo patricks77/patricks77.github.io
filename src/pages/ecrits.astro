@@ -1,6 +1,12 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { books } from "../data/siteData";
+
+const bookEmojis = ["◐", "◑"];
+const bookGlows = [
+  "radial-gradient(circle at 30% 30%, rgba(245, 182, 101, 0.15), transparent 60%)",
+  "radial-gradient(circle at 30% 30%, rgba(216, 162, 183, 0.12), transparent 60%)"
+];
 ---
 
 <BaseLayout title="Écrits · Patrick Séguin · DeePat Studio" description="Écrits de Patrick Séguin — Mile après Mile, Architectes du Dernier Monde, et plus." current="Écrits">
@@ -21,10 +27,13 @@ import { books } from "../data/siteData";
 
   <section class="section book-section">
     {books.map((book, index) => (
-      <article class:list={["book-feature", index % 2 ? "reverse" : ""]}>
-        <div class="book-cover" aria-hidden="true">
-          <span>{book.title}</span>
-          <small>{book.kicker}</small>
+      <article class:list={["book-feature reveal", index % 2 ? "reverse" : ""]}>
+        <div class="book-cover" aria-hidden="true" style={`background: ${bookGlows[index]}, linear-gradient(160deg, rgba(245, 182, 101, 0.1), transparent 48%), linear-gradient(180deg, var(--surface), var(--bg-soft));`}>
+          <div style="display: flex; justify-content: space-between; align-items: start;">
+            <span style="font-size: 3.5rem; opacity: 0.4;">{bookEmojis[index]}</span>
+            <small>{book.kicker}</small>
+          </div>
+          <span style="margin-top: auto; font-size: clamp(1.6rem, 3vw, 2.8rem);">{book.title}</span>
         </div>
         <div>
           <p class="eyebrow">{book.kicker}</p>
@@ -41,7 +50,7 @@ import { books } from "../data/siteData";
         </div>
       </article>
     ))}
-    <div class="quiet-note">
+    <div class="quiet-note reveal">
       <span>À venir</span>
       <p>D'autres écrits sont en gestation. Nouvelles, essais, possibles spin-offs de la saga.</p>
     </div>

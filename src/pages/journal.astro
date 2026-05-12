@@ -1,6 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { journalEntries } from "../data/siteData";
+
+const tagColors: Record<string, string> = {
+  Studio: "var(--gold)",
+  Design: "var(--rose)",
+  Récit: "var(--copper)",
+  Musique: "var(--teal)",
+  Écrit: "var(--text-soft)"
+};
 ---
 
 <BaseLayout title="Journal · DeePat Studio" description="Journal de DeePat Studio — notes de Patrick Séguin." current="Journal">
@@ -17,11 +25,11 @@ import { journalEntries } from "../data/siteData";
 
   <section class="section">
     <ol class="journal-list full">
-      {journalEntries.map((entry) => (
-        <li>
+      {journalEntries.map((entry, index) => (
+        <li class="reveal" style={`transition-delay: ${Math.min(index * 0.08, 0.4)}s;`}>
           <div>
             <span>{entry.date}</span>
-            <small>{entry.tag}</small>
+            <small style={`border-color: ${tagColors[entry.tag] || 'var(--line)'}; color: ${tagColors[entry.tag] || 'var(--text-soft)'};`}>{entry.tag}</small>
           </div>
           <h2>{entry.title}</h2>
           <p>{entry.excerpt}</p>

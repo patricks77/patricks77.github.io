@@ -1,34 +1,48 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import { disciplines } from "../data/siteData";
+
+const icons: Record<string, string> = {
+  apps: "⚡",
+  ecrits: "✦",
+  musique: "◈",
+  designs: "◇"
+};
+
+const glowColors: Record<string, string> = {
+  apps: "rgba(91, 210, 208, 0.08)",
+  ecrits: "rgba(216, 162, 183, 0.08)",
+  musique: "rgba(255, 143, 79, 0.08)",
+  designs: "rgba(245, 182, 101, 0.08)"
+};
 ---
 
 <BaseLayout current="Accueil">
   <section class="hero-section home-hero">
     <div class="hero-copy">
-      <p class="eyebrow">Studio indépendant · Montréal</p>
-      <h1>DeePat Studio relie outils, mondes et signaux sensibles.</h1>
-      <p class="hero-lead">
+      <p class="eyebrow hero-animate">Studio indépendant · Montréal</p>
+      <h1 class="hero-animate">DeePat Studio relie outils, mondes et signaux sensibles.</h1>
+      <p class="hero-lead hero-animate">
         Une porte d'entrée vers les travaux de Patrick Séguin: applications, écrits, musique,
         designs et notes de studio. Chaque page a maintenant son propre espace.
       </p>
-      <div class="hero-actions">
+      <div class="hero-actions hero-animate">
         <a class="button primary" href="/applications/">Voir les travaux</a>
         <a class="button quiet" href="/studio/">Le studio</a>
       </div>
-      <ul class="trait-line" aria-label="Traits du studio">
+      <ul class="trait-line hero-animate" aria-label="Traits du studio">
         <li>INTP · structure</li>
         <li>HSP · sensibilité</li>
         <li>Polymath · connexions</li>
       </ul>
     </div>
 
-    <figure class="hero-banner">
+    <figure class="hero-banner hero-animate">
       <img src="/assets/banner-deepat.png" alt="Bannière DeePat Studio mêlant musique, livres, code et paysage fantastique" />
     </figure>
   </section>
 
-  <section class="section portal-section">
+  <section class="section portal-section reveal">
     <div class="section-heading">
       <p class="eyebrow">Entrées principales</p>
       <h2>Choisis le territoire de travail.</h2>
@@ -40,21 +54,24 @@ import { disciplines } from "../data/siteData";
 
     <div class="portal-grid">
       {disciplines.map((item) => (
-        <a class="portal-card" href={item.href}>
+        <a class="portal-card reveal reveal-delay-1" href={item.href} style={`--card-glow: ${glowColors[item.id]}`}>
           <span>{item.signature}</span>
           <h3>{item.label}</h3>
           <p>{item.signal}</p>
+          <div class="card-icon">{icons[item.id]}</div>
         </a>
       ))}
-      <a class="portal-card soft" href="/journal/">
+      <a class="portal-card soft reveal reveal-delay-2" href="/journal/">
         <span>Notes de Patrick Séguin</span>
         <h3>Journal</h3>
         <p>Carnet de bord du studio</p>
+        <div class="card-icon">✎</div>
       </a>
-      <a class="portal-card soft" href="/studio/">
+      <a class="portal-card soft reveal reveal-delay-3" href="/studio/">
         <span>DeePat Studio</span>
         <h3>Studio</h3>
         <p>Fondateur, méthode, contact</p>
+        <div class="card-icon">◉</div>
       </a>
     </div>
   </section>

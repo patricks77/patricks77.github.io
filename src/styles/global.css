@@ -406,6 +406,8 @@ h2 {
     0 32px 80px rgba(0, 0, 0, 0.45),
     0 0 0 1px rgba(245, 182, 101, 0.1);
   isolation: isolate;
+  aspect-ratio: 2064 / 512;
+  background: #0a0907;
 }
 
 .hero-banner::after {
@@ -420,8 +422,8 @@ h2 {
 
 .hero-banner img {
   width: 100%;
-  min-height: 270px;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
 }
 
 /* ===== Portal / Cards Grid ===== */
@@ -1416,11 +1418,14 @@ h2 {
     padding-top: 26px;
   }
 
-  .hero-banner img {
+  .hero-banner {
     aspect-ratio: 2064 / 512;
+    background: #0a0907;
+  }
+
+  .hero-banner img {
     min-height: 0;
     object-fit: contain;
-    background: #0a0907;
   }
 
   .hero-copy h1 {

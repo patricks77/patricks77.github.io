@@ -273,6 +273,7 @@ main {
   min-height: auto;
   padding-bottom: clamp(28px, 5vw, 58px);
   position: relative;
+  display: block;
 }
 
 .home-hero::before {
@@ -286,6 +287,14 @@ main {
   pointer-events: none;
   z-index: 0;
   opacity: 0.7;
+}
+
+.home-hero .hero-copy {
+  max-width: 800px;
+}
+
+.home-hero .hero-copy h1 {
+  max-width: 20ch;
 }
 
 .hero-copy {

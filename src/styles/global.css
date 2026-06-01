@@ -880,6 +880,83 @@ h2 {
   justify-content: space-between;
 }
 
+/* ===== Legal / Product Policy Pages ===== */
+.legal-hero {
+  max-width: 920px;
+  padding-bottom: clamp(28px, 5vw, 52px);
+}
+
+.legal-index {
+  padding-top: clamp(24px, 4vw, 48px);
+}
+
+.legal-document {
+  padding-top: clamp(20px, 4vw, 44px);
+}
+
+.legal-document article {
+  max-width: 880px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: clamp(24px, 5vw, 56px);
+  background:
+    linear-gradient(145deg, rgba(91, 210, 208, 0.045), transparent 45%),
+    rgba(30, 27, 23, 0.82);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.28);
+}
+
+.legal-document h2 {
+  margin: 36px 0 10px;
+  color: var(--text);
+  font-family: var(--display);
+  font-size: clamp(1.65rem, 2.8vw, 2.45rem);
+  font-weight: 400;
+  line-height: 1.05;
+}
+
+.legal-document h2:first-child {
+  margin-top: 0;
+}
+
+.legal-document p,
+.legal-document li {
+  color: var(--text-soft);
+}
+
+.legal-document p {
+  max-width: 76ch;
+}
+
+.legal-document ul,
+.legal-document ol {
+  display: grid;
+  gap: 10px;
+  max-width: 78ch;
+  margin: 14px 0 22px 1.2rem;
+  padding-left: 1.1rem;
+}
+
+.legal-document ul {
+  list-style: disc;
+}
+
+.legal-document ol {
+  list-style: decimal;
+}
+
+.legal-document a {
+  color: var(--teal);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: rgba(91, 210, 208, 0.45);
+  text-underline-offset: 3px;
+}
+
+.legal-document a:hover {
+  color: var(--gold);
+  text-decoration-color: rgba(245, 182, 101, 0.55);
+}
+
 .editorial-pair {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

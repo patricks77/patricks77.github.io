@@ -1,0 +1,126 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+const lastUpdated = "1 juin 2026";
+---
+
+<BaseLayout
+  title="Politique de confidentialité HealthManager · DeePat Studio"
+  description="Politique de confidentialité de l'application mobile HealthManager."
+  current="Applications"
+  bgImage="/assets/fond-application.png"
+>
+  <section class="page-hero legal-hero">
+    <a class="back-link" href="/healthmanager/">Retour à HealthManager</a>
+    <p class="eyebrow">HealthManager · Confidentialité</p>
+    <h1>Politique de confidentialité</h1>
+    <p>Dernière mise à jour: {lastUpdated}</p>
+    <p>
+      HealthManager est développée par DeePat Studio, à Montréal, Québec, Canada.
+      Cette politique explique quelles données sont traitées par l'application et
+      comment elles sont protégées.
+    </p>
+  </section>
+
+  <section class="section legal-document">
+    <article>
+      <h2>1. Notre engagement</h2>
+      <p>
+        HealthManager est une application de suivi personnel de santé. Elle ne remplace pas un
+        professionnel de la santé, ne pose pas de diagnostic et ne fournit pas de traitement médical.
+        Les données sont utilisées pour offrir les fonctionnalités de suivi, d'analyse, de rappel,
+        d'export et d'assistance IA demandées par l'utilisateur.
+      </p>
+
+      <h2>2. Données que vous fournissez</h2>
+      <p>Selon les modules que vous utilisez, HealthManager peut traiter les données suivantes:</p>
+      <ul>
+        <li>Données de compte: adresse courriel, identifiant utilisateur, langue et préférences.</li>
+        <li>Profil: prénom, date de naissance, sexe biologique, taille, poids, pays, région, unités et objectifs.</li>
+        <li>Données de santé: tension artérielle, glycémie, cholestérol, poids, hydratation, nutrition, activité, médicaments, rendez-vous, humeur et notes de journal.</li>
+        <li>Identifiants de santé ou de patient, lorsque vous choisissez volontairement de les enregistrer.</li>
+        <li>Photos ou images que vous choisissez d'envoyer pour l'analyse OCR de medicaments ou d'ordonnances.</li>
+        <li>Données d'achat ou d'abonnement gérées par Google Play lorsque des fonctionnalités Premium sont activées.</li>
+      </ul>
+
+      <h2>3. Données automatiques et permissions</h2>
+      <p>HealthManager peut aussi traiter certaines données techniques ou permissions:</p>
+      <ul>
+        <li>Journaux techniques et erreurs d'application pour diagnostiquer les problèmes.</li>
+        <li>Donnees Health Connect, seulement si vous accordez les permissions Android correspondantes.</li>
+        <li>Camera ou galerie, seulement lorsque vous choisissez de scanner une image.</li>
+        <li>Localisation approximative ou actuelle, si vous activez des fonctions qui estiment un objectif d'hydratation selon la météo locale.</li>
+        <li>Notifications, seulement pour les rappels configurés par l'utilisateur.</li>
+      </ul>
+
+      <h2>4. Utilisation des données</h2>
+      <p>Les données sont utilisées pour:</p>
+      <ul>
+        <li>Créer et sécuriser votre compte.</li>
+        <li>Enregistrer, afficher et analyser vos données de suivi personnel.</li>
+        <li>Generer des graphiques, historiques, exports et rappels.</li>
+        <li>Fournir des analyses IA lorsque vous utilisez ces fonctions.</li>
+        <li>Gérer les fonctionnalités gratuites et Premium.</li>
+        <li>Corriger les erreurs, améliorer la stabilité et prévenir les abus.</li>
+      </ul>
+
+      <h2>5. IA et fournisseurs techniques</h2>
+      <p>
+        Certaines fonctions d'IA peuvent envoyer le contenu nécessaire à nos fonctions serveur
+        Supabase, qui appellent ensuite des fournisseurs d'IA ou de recherche lorsque requis.
+        Ces appels servent à analyser des repas, activités, historiques de santé ou informations
+        nutritionnelles. Les résultats peuvent contenir des erreurs et doivent rester informatifs.
+      </p>
+      <p>
+        Les fournisseurs techniques peuvent inclure Supabase pour l'authentification, la base de
+        données, le stockage et les fonctions serveur; Mistral AI pour certaines analyses IA; et
+        Brave Search lorsque des informations nutritionnelles publiques doivent être recherchées.
+      </p>
+
+      <h2>6. Partage des données</h2>
+      <p>
+        HealthManager ne vend pas vos données personnelles. Un partage limité peut avoir lieu avec
+        des fournisseurs techniques nécessaires au fonctionnement de l'application, lorsque vous
+        demandez explicitement un export ou lorsque la loi l'exige.
+      </p>
+
+      <h2>7. Securite</h2>
+      <p>
+        Les données sont transmises de façon chiffrée. L'application utilise Supabase avec des
+        contrôles d'accès et des politiques de sécurité au niveau des lignes pour limiter l'accès
+        aux données de chaque utilisateur. Aucune méthode de sécurité n'est parfaite, mais nous
+        appliquons des mesures raisonnables pour protéger les données de santé.
+      </p>
+
+      <h2>8. Conservation et suppression</h2>
+      <p>
+        Les données personnelles sont conservées tant que votre compte est actif ou tant qu'elles
+        sont nécessaires pour fournir le service. Vous pouvez demander la suppression de votre
+        compte et des données associées depuis l'application ou via la page publique de suppression.
+      </p>
+      <p>
+        Page de suppression: <a href="/healthmanager/delete-account/">deepatstudio.com/healthmanager/delete-account</a>
+      </p>
+
+      <h2>9. Vos droits</h2>
+      <p>
+        Selon votre juridiction, vous pouvez demander l'accès, la correction, l'export, la suppression
+        ou la limitation du traitement de vos données. Vous pouvez aussi retirer certains consentements
+        en retirant les permissions systeme ou en supprimant votre compte.
+      </p>
+
+      <h2>10. Enfants</h2>
+      <p>
+        HealthManager n'est pas conçue pour les enfants de moins de 13 ans. Les utilisateurs mineurs
+        doivent respecter les exigences de consentement parental applicables dans leur juridiction.
+      </p>
+
+      <h2>11. Contact confidentialité</h2>
+      <p>
+        Pour toute question ou demande liée à la confidentialité, contactez:
+        <a href="mailto:privacy@deepatstudio.com">privacy@deepatstudio.com</a>
+      </p>
+      <p>DeePat Studio<br />Montréal, Québec, Canada</p>
+    </article>
+  </section>
+</BaseLayout>

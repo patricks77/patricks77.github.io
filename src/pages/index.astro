@@ -1,0 +1,40 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="L’humanité, l’imaginaire et la création">
+  <section class="hero">
+    <p class="eyebrow">Le carnet de Patrick Lovesmore</p>
+    <h1>Un mélange de technologie, de mondes imaginaires, de musique et de sensibilité.</h1>
+    <p class="intro">
+      J’explore l’humanité à travers la fantasy, la science-fiction, la musique, l’écriture,
+      l’art et les outils que je construis pour donner une forme concrète à mes idées.
+    </p>
+    <div class="hero-actions">
+      <a class="button" href="/about">Entrer dans mon univers</a>
+      <a class="text-link" href="/journal">Lire le journal →</a>
+    </div>
+  </section>
+
+  <section class="themes" aria-labelledby="themes-title">
+    <p class="eyebrow">Les fils qui se croisent</p>
+    <h2 id="themes-title">Tout revient à l’humain.</h2>
+    <div class="theme-grid">
+      <article>
+        <span class="theme-number">01</span>
+        <h3>Les mondes</h3>
+        <p>Fantasy, science-fiction, personnages et univers qui permettent de regarder l’humain autrement.</p>
+      </article>
+      <article>
+        <span class="theme-number">02</span>
+        <h3>La musique</h3>
+        <p>Pop, celtique, atmosphères et émotions qui trouvent parfois une autre langue que les mots.</p>
+      </article>
+      <article>
+        <span class="theme-number">03</span>
+        <h3>La création</h3>
+        <p>Livres, images, logiciels et idées : les différentes formes d’une même curiosité.</p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>

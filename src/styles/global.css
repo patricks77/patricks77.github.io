@@ -34,3 +34,4 @@ body:not(:has(.author-page)) h1 { font-size:clamp(2.55rem,5.4vw,5.25rem); }
 body:not(:has(.author-page)) .article-header h1 { font-size:clamp(2.5rem,4.8vw,4.7rem); }
 body:not(:has(.author-page)) .journal-page h1,body:not(:has(.author-page)) .content-page h1 { font-size:clamp(2.45rem,4.8vw,4.6rem); }
 @media (max-width:760px) { body:not(:has(.author-page)) h1,body:not(:has(.author-page)) .article-header h1,body:not(:has(.author-page)) .journal-page h1,body:not(:has(.author-page)) .content-page h1 { font-size:clamp(2.35rem,11vw,3.45rem); } }
+.article-hero-image { margin:0 0 3.75rem; overflow:hidden; border:1px solid var(--line); background:#0a1322; box-shadow:0 18px 42px rgba(12,40,74,.14); }.article-hero-image img { display:block; width:100%; aspect-ratio:16 / 9; object-fit:cover; }.article-hero-image figcaption { padding:.75rem 1rem; color:#dcecff; font:.74rem system-ui,sans-serif; letter-spacing:.03em; }

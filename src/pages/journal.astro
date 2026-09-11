@@ -1,15 +1,68 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+
+const fragments = [
+  { title: 'Je pense beaucoup. Je ressens fort.', excerpt: 'Quand l’analyse devient une façon de tenir debout, et que chaque émotion semble arriver avec le volume trop haut.', categories: ['esprit', 'emotions'], label: 'Esprit & émotions' },
+  { title: 'Nous inventons des planètes pour parler de la maison.', excerpt: 'Pourquoi la fantasy et la science-fiction peuvent parfois dire la vérité avec plus de douceur que le réel.', categories: ['mondes', 'humanite'], label: 'Mondes imaginaires' },
+  { title: 'La musique comme troisième langue.', excerpt: 'Il y a des émotions qui ne se laissent pas expliquer, mais qui savent très bien se faire entendre dans une mélodie.', categories: ['musique', 'emotions'], label: 'Musique' },
+  { title: 'Créer pour ne pas perdre le fil.', excerpt: 'Écrire, dessiner, imaginer, construire : différentes manières de donner une forme à ce qui déborde.', categories: ['creation', 'emotions'], label: 'Création' },
+  { title: 'La solitude peut aussi être un observatoire.', excerpt: 'Regarder les autres de loin n’est pas toujours fuir. Cela peut être une façon d’apprendre à les comprendre.', categories: ['humanite', 'esprit'], label: 'Humanité & relations' },
+  { title: 'La technologie n’est intéressante que lorsqu’elle sert les humains.', excerpt: 'Les outils me fascinent, mais ce qui m’importe reste toujours ce qu’ils permettent de relier, de créer ou de réparer.', categories: ['technologie', 'humanite'], label: 'Technologie humaine' },
+];
 ---
 
 <BaseLayout title="Journal">
-  <section class="content-page">
-    <p class="eyebrow">Journal</p>
-    <h1>Les premières pages restent à écrire.</h1>
+  <section class="journal-page">
+    <p class="eyebrow">Le journal</p>
+    <h1>Les pensées qui demandent<br /><em>plus d’espace.</em></h1>
     <p class="lead">
-      Ici viendront les réflexions, les fragments, les coulisses des projets et les questions
-      qui reviennent toujours vers l’humain.
+      Des fragments sur l’esprit, les émotions, les mondes imaginaires, la musique,
+      la création et tout ce qui revient toujours vers l’humain.
     </p>
-    <p>Le journal sera alimenté progressivement, au rythme des idées qui méritent de prendre forme.</p>
+
+    <div class="filter-bar" aria-label="Filtrer les fragments">
+      <button class="filter-button is-active" type="button" data-filter="all">Tout</button>
+      <button class="filter-button" type="button" data-filter="esprit">Esprit & émotions</button>
+      <button class="filter-button" type="button" data-filter="humanite">Humanité</button>
+      <button class="filter-button" type="button" data-filter="mondes">Mondes</button>
+      <button class="filter-button" type="button" data-filter="musique">Musique</button>
+      <button class="filter-button" type="button" data-filter="creation">Création</button>
+      <button class="filter-button" type="button" data-filter="technologie">Technologie humaine</button>
+    </div>
+
+    <div class="fragment-grid" data-fragment-grid>
+      {fragments.map((fragment, index) => (
+        <article class="fragment-card" data-categories={fragment.categories.join(' ')}>
+          <span class="fragment-number">0{index + 1}</span>
+          <p class="card-meta">{fragment.label} <span>·</span> À venir</p>
+          <h2>{fragment.title}</h2>
+          <p>{fragment.excerpt}</p>
+          <span class="read-link">Bientôt dans le journal <b>↗</b></span>
+        </article>
+      ))}
+    </div>
+    <p class="filter-empty" hidden data-filter-empty>Aucun fragment ne correspond encore à cette catégorie.</p>
   </section>
 </BaseLayout>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+  const cards = document.querySelectorAll<HTMLElement>('[data-categories]');
+  const empty = document.querySelector<HTMLElement>('[data-filter-empty]');
+
+  buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+      let visible = 0;
+
+      buttons.forEach((item) => item.classList.toggle('is-active', item === button));
+      cards.forEach((card) => {
+        const matches = filter === 'all' || card.dataset.categories?.split(' ').includes(filter ?? '');
+        card.hidden = !matches;
+        if (matches) visible += 1;
+      });
+
+      if (empty) empty.hidden = visible !== 0;
+    });
+  });
+</script>

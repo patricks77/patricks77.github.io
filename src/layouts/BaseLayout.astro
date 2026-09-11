@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = 'Un carnet sur l’humanité, l’imaginaire et la création.' } = Astro.props;
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="data:," />
+    <title>{title} · Patrick Lovesmore</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="/">Patrick Lovesmore</a>
+      <nav aria-label="Navigation principale">
+        <a href="/">Accueil</a>
+        <a href="/about">À propos</a>
+        <a href="/journal">Journal</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <span>Patrick Lovesmore</span>
+      <span>Un regard sur l’humanité.</span>
+    </footer>
+  </body>
+</html>

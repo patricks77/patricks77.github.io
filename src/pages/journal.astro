@@ -2,12 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 
 const fragments = [
-  { title: 'Je pense beaucoup. Je ressens fort.', excerpt: 'Quand l’analyse devient une façon de tenir debout, et que chaque émotion semble arriver avec le volume trop haut.', categories: ['esprit', 'emotions'], label: 'Esprit & émotions' },
-  { title: 'Nous inventons des planètes pour parler de la maison.', excerpt: 'Pourquoi la fantasy et la science-fiction peuvent parfois dire la vérité avec plus de douceur que le réel.', categories: ['mondes', 'humanite'], label: 'Mondes imaginaires' },
-  { title: 'La musique comme troisième langue.', excerpt: 'Il y a des émotions qui ne se laissent pas expliquer, mais qui savent très bien se faire entendre dans une mélodie.', categories: ['musique', 'emotions'], label: 'Musique' },
-  { title: 'Créer pour ne pas perdre le fil.', excerpt: 'Écrire, dessiner, imaginer, construire : différentes manières de donner une forme à ce qui déborde.', categories: ['creation', 'emotions'], label: 'Création' },
-  { title: 'La solitude peut aussi être un observatoire.', excerpt: 'Regarder les autres de loin n’est pas toujours fuir. Cela peut être une façon d’apprendre à les comprendre.', categories: ['humanite', 'esprit'], label: 'Humanité & relations' },
-  { title: 'La technologie n’est intéressante que lorsqu’elle sert les humains.', excerpt: 'Les outils me fascinent, mais ce qui m’importe reste toujours ce qu’ils permettent de relier, de créer ou de réparer.', categories: ['technologie', 'humanite'], label: 'Technologie humaine' },
+  { title: 'La chanson de Noël que je n’ai pas écrite', excerpt: 'Quatre intelligences artificielles, un humain qui fait le lien, et une chanson offerte comme un cadeau de Noël à l’humanité.', categories: ['creation', 'technologie', 'humanite', 'musique'], label: 'Création & humanité', href: '/journal/la-chanson-de-noel-que-je-nai-pas-ecrite' },
 ];
 ---
 
@@ -34,10 +29,10 @@ const fragments = [
       {fragments.map((fragment, index) => (
         <article class="fragment-card" data-categories={fragment.categories.join(' ')}>
           <span class="fragment-number">0{index + 1}</span>
-          <p class="card-meta">{fragment.label} <span>·</span> À venir</p>
+          <p class="card-meta">{fragment.label} <span>·</span> {fragment.href ? 'Publié' : 'À venir'}</p>
           <h2>{fragment.title}</h2>
           <p>{fragment.excerpt}</p>
-          <span class="read-link">Bientôt dans le journal <b>↗</b></span>
+          {fragment.href ? <a class="read-link" href={fragment.href}>Lire l’article <b>↗</b></a> : <span class="read-link">Bientôt dans le journal <b>↗</b></span>}
         </article>
       ))}
     </div>

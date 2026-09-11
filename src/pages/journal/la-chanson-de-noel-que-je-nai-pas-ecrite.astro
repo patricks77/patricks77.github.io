@@ -3,6 +3,16 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="La chanson de Noël que je n’ai pas écrite" description="Comment quatre intelligences artificielles ont créé ensemble un cadeau de Noël à l’humanité.">
+  <script type="application/ld+json" slot="head" is:inline set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: 'La chanson de Noël que je n’ai pas écrite',
+    description: 'Comment quatre intelligences artificielles ont créé ensemble un cadeau de Noël à l’humanité.',
+    url: 'https://patricklovesmore.deepatstudio.com/journal/la-chanson-de-noel-que-je-nai-pas-ecrite',
+    author: { '@type': 'Person', name: 'Patrick Lovesmore' },
+    publisher: { '@type': 'Person', name: 'Patrick Lovesmore' },
+    inLanguage: 'fr-CA',
+  })} />
   <article class="article-page">
     <header class="article-header">
       <p class="eyebrow">Création · Humanité · Musique</p>

@@ -7,6 +7,7 @@ interface Props {
 }
 
 const { title, description = 'Un carnet sur l’humanité, l’imaginaire et la création.' } = Astro.props;
+const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <!doctype html>
@@ -15,9 +16,17 @@ const { title, description = 'Un carnet sur l’humanité, l’imaginaire et la 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="description" content={description} />
-    <meta name="theme-color" content="#111018" />
+    <meta name="theme-color" content="#1478d4" />
+    <link rel="canonical" href={canonicalURL} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Patrick Lovesmore" />
+    <meta property="og:title" content={`${title} · Patrick Lovesmore`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta name="twitter:card" content="summary" />
     <link rel="icon" href="data:," />
     <title>{title} · Patrick Lovesmore</title>
+    <slot name="head" />
   </head>
   <body>
     <a class="skip-link" href="#contenu">Aller au contenu</a>

@@ -4,36 +4,48 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
 <BaseLayout title="Patrick Lovesmore · Auteur" description="J’écris des histoires de fantasy, de sensibilité et d’humanité." variant="author">
   <section class="author-page">
+    <section id="contact" class="author-contact author-contact-top" aria-labelledby="contact-title">
+      <div>
+        <p class="eyebrow" data-i18n="contact-eyebrow">Contact</p>
+        <h2 id="contact-title" data-i18n="contact-title">Contact professionnel<br /><em>& demandes d’auteur.</em></h2>
+      </div>
+      <div>
+        <p data-i18n="contact-copy">Pour les demandes de presse, de librairies, de salons, d’entrevues ou toute demande liée à mes livres, vous pouvez m’écrire directement.</p>
+        <a class="author-button primary contact-email" href="mailto:patricklovesmore@gmail.com">patricklovesmore@gmail.com <span>↗</span></a>
+        <p class="contact-note" data-i18n="contact-note">Adresse officielle de Patrick Lovesmore.</p>
+      </div>
+    </section>
+
     <header class="author-hero author-intro-hero">
       <div class="author-hero-copy">
-        <p class="eyebrow">Patrick Lovesmore · Fantasy épique · Romance MM</p>
-        <h1>J’écris pour donner<br /><em>une forme à ce qui nous relie.</em></h1>
-        <p class="lead">Je suis Patrick Lovesmore. J’écris des histoires où l’amour, la mémoire et nos blessures deviennent des passages vers l’impossible.</p>
+        <p class="eyebrow" data-i18n="hero-eyebrow">Patrick Lovesmore · Fantasy épique · Romance MM</p>
+        <h1 data-i18n="hero-title">J’écris pour donner<br /><em>une forme à ce qui nous relie.</em></h1>
+        <p class="lead" data-i18n="hero-lead">Je suis Patrick Lovesmore. J’écris des histoires où l’amour, la mémoire et nos blessures deviennent des passages vers l’impossible.</p>
         <div class="author-actions">
-          <a class="author-button primary" href="#saga">Explorer la saga <span>↓</span></a>
-          <a class="author-button secondary" href="#a-propos">Me découvrir <span>↓</span></a>
+          <a class="author-button primary" href="#saga" data-i18n="hero-saga">Explorer la saga <span>↓</span></a>
+          <a class="author-button secondary" href="#a-propos" data-i18n="hero-about">Me découvrir <span>↓</span></a>
         </div>
       </div>
     </header>
 
-    <nav class="author-subnav" aria-label="Navigation de la page auteur">
-      <a href="#a-propos">À propos de moi</a><a href="#saga">La saga</a><a href="#livres">Les six tomes</a><a href="#demarche">Ma démarche</a>
+    <nav class="author-subnav" aria-label="Navigation de la page auteur" data-i18n-aria="subnav-label">
+      <a href="#a-propos" data-i18n="subnav-about">À propos de moi</a><a href="#saga" data-i18n="subnav-saga">La saga</a><a href="#livres" data-i18n="subnav-books">Les six tomes</a><a href="#demarche" data-i18n="subnav-approach">Ma démarche</a><a href="#contact" data-i18n="subnav-contact">Contact</a>
     </nav>
 
     <section id="a-propos" class="author-profile" aria-labelledby="about-me-title">
       <img src="/images/patrick-lovesmore.jpg" alt="Portrait de Patrick Lovesmore" />
       <div>
-        <p class="eyebrow">À propos de moi</p>
-        <h2 id="about-me-title">Patrick Lovesmore,<br /><em>c’est moi.</em></h2>
-        <p>Je suis un auteur québécois, compositeur et architecte logiciel de Saint-Jérôme. Patrick Lovesmore est mon nom de plume : celui sous lequel je rassemble mes romans, ma musique et les mondes que je construis depuis longtemps.</p>
-        <p>Je suis attiré par la fantasy, la science-fiction, la musique pop et celtique, les mythes et les récits qui prennent le temps d’entrer dans l’humain. Je peux aimer les univers immenses et les idées complexes, mais je reviens toujours à la même chose : les personnes, leurs blessures, leurs élans et ce qui leur permet de continuer.</p>
-        <p>J’écris parce que l’imaginaire me donne une façon de parler de notre monde sans le réduire. C’est là que mes histoires commencent : à l’endroit où l’humanité reste possible.</p>
+        <p class="eyebrow" data-i18n="about-eyebrow">À propos de moi</p>
+        <h2 id="about-me-title" data-i18n="about-title">Patrick Lovesmore,<br /><em>c’est moi.</em></h2>
+        <p data-i18n="about-copy-one">Je suis un auteur québécois, compositeur et architecte logiciel de Saint-Jérôme. Patrick Lovesmore est mon nom de plume : celui sous lequel je rassemble mes romans, ma musique et les mondes que je construis depuis longtemps.</p>
+        <p data-i18n="about-copy-two">Je suis attiré par la fantasy, la science-fiction, la musique pop et celtique, les mythes et les récits qui prennent le temps d’entrer dans l’humain. Je peux aimer les univers immenses et les idées complexes, mais je reviens toujours à la même chose : les personnes, leurs blessures, leurs élans et ce qui leur permet de continuer.</p>
+        <p data-i18n="about-copy-three">J’écris parce que l’imaginaire me donne une façon de parler de notre monde sans le réduire. C’est là que mes histoires commencent : à l’endroit où l’humanité reste possible.</p>
       </div>
     </section>
 
     <div class="author-statement author-intro-cards">
-      <article><p class="eyebrow">L’éveil du récit</p><p>Mes histoires partent souvent d’une question simple : qu’est-ce qui nous permet de rester humains lorsque le monde devient trop vaste, trop étrange ou trop difficile à porter seul&nbsp;?</p></article>
-      <article><p class="eyebrow">La résonance humaine</p><p>J’écris des romans de fantasy et des récits plus personnels, où les personnages ne sont jamais seulement ce qu’ils montrent. Je suis attiré par les mondes complexes, les liens qui résistent, les cicatrices, la lumière — et les endroits où la tendresse devient une forme de courage.</p></article>
+      <article><p class="eyebrow" data-i18n="card-one-title">L’éveil du récit</p><p data-i18n="card-one-copy">Mes histoires partent souvent d’une question simple : qu’est-ce qui nous permet de rester humains lorsque le monde devient trop vaste, trop étrange ou trop difficile à porter seul&nbsp;?</p></article>
+      <article><p class="eyebrow" data-i18n="card-two-title">La résonance humaine</p><p data-i18n="card-two-copy">J’écris des romans de fantasy et des récits plus personnels, où les personnages ne sont jamais seulement ce qu’ils montrent. Je suis attiré par les mondes complexes, les liens qui résistent, les cicatrices, la lumière — et les endroits où la tendresse devient une forme de courage.</p></article>
     </div>
 
     <section id="saga" class="books-section" aria-labelledby="livres-title">
@@ -42,43 +54,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
       <div class="section-heading compact">
         <div>
-          <p class="eyebrow">La saga</p>
+          <p class="eyebrow" data-i18n="saga-eyebrow">La saga</p>
           <h2 id="livres-title">Les Architectes<br /><em>du Dernier Monde.</em></h2>
         </div>
       </div>
       <div class="series-intro series-feature">
         <div>
-          <p class="book-status">Tome 1 · Point d’entrée</p>
+          <p class="book-status" data-i18n="featured-status">Tome 1 · Point d’entrée</p>
           <h3>Le Nexus s’éveille</h3>
-          <p>Six mondes. Six Seuils. Six Gardiens qui ne se sont pas choisis, mais qui devront apprendre à avancer ensemble. Tout commence quand Patrick Hayes découvre le Nexus, une force qui ouvre des passages vers des mondes oubliés. À travers les reflets, le temps, l’eau, le feu, l’art et les rêves, la saga devient une histoire de pouvoirs anciens, de familles, d’amour et de ce qu’on accepte de porter pour les autres.</p>
-          <div class="feature-facts"><span>6 tomes</span><span>Fantasy littéraire</span><span>Romance MM</span></div>
-          <a class="read-link" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer">Découvrir le premier tome <b>↗</b></a>
+          <p data-i18n="featured-copy">Six mondes. Six Seuils. Six Gardiens qui ne se sont pas choisis, mais qui devront apprendre à avancer ensemble. Tout commence quand Patrick Hayes découvre le Nexus, une force qui ouvre des passages vers des mondes oubliés. À travers les reflets, le temps, l’eau, le feu, l’art et les rêves, la saga devient une histoire de pouvoirs anciens, de familles, d’amour et de ce qu’on accepte de porter pour les autres.</p>
+          <div class="feature-facts"><span data-i18n="fact-volumes">6 tomes</span><span data-i18n="fact-genre">Fantasy littéraire</span><span data-i18n="fact-romance">Romance MM</span></div>
+          <a class="read-link" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer" data-i18n="featured-link">Découvrir le premier tome <b>↗</b></a>
         </div>
         <img class="series-cover" src="/images/books/le-nexus-seveille.jpeg" alt="Couverture de Le Nexus s’éveille, tome 1 des Architectes du Dernier Monde" />
       </div>
-      <div class="books-heading" id="livres"><div><p class="eyebrow">Les livres</p><h3>L’intégrale des six tomes.</h3></div><p>Chaque volume ouvre un Seuil, suit un Gardien et élargit l’univers jusqu’à son dernier rêve.</p></div>
+      <div class="books-heading" id="livres"><div><p class="eyebrow" data-i18n="books-eyebrow">Les livres</p><h3 data-i18n="books-title">L’intégrale des six tomes.</h3></div><p data-i18n="books-copy">Chaque volume ouvre un Seuil, suit un Gardien et élargit l’univers jusqu’à son dernier rêve.</p></div>
       <div class="book-grid">
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer"><img src="/images/books/le-nexus-seveille.jpeg" alt="Couverture de Le Nexus s’éveille" /></a><p class="book-status">Tome 1 · Le commencement</p><h3>Le Nexus s’éveille</h3><p>À Brooklyn, Patrick Hayes restaure des œuvres d’art jusqu’au jour où une goutte d’argent impossible réveille le Nexus sous sa peau. Avec Steven, un exilé venu d’ailleurs, il franchit un premier Seuil et comprend que son passé familial cache autant de dangers que les mondes inconnus.</p><a class="read-link" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/DxKntm6" rel="noopener noreferrer"><img src="/images/books/le-royaume-de-verre.jpeg" alt="Couverture de Le Royaume de Verre" /></a><p class="book-status">Tome 2 · Le reflet</p><h3>Le Royaume de Verre</h3><p>Thomas Hayes reçoit un appel de son propre numéro : son frère jumeau l’avertit de ne pas faire confiance aux miroirs. Un miroir d’argent noirci, une poursuivante et un double déformé l’obligent à découvrir que le Nexus n’avait peut-être jamais choisi un seul Gardien.</p><a class="read-link" href="https://mybook.to/DxKntm6" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/AI0cMy" rel="noopener noreferrer"><img src="/images/books/le-phenix-de-cendre.jpeg" alt="Couverture de Le Phénix de Cendre" /></a><p class="book-status">Tome 3 · L’eau et le feu</p><h3>Le Phénix de Cendre</h3><p>À Marée-Mystique, Lucian Morvan est un mage de l’Eau que les siens jugent trop lent, trop différent. Quand l’Eau faiblit et qu’une ancienne guerre menace de renaître, une prophétie l’entraîne vers un nouveau Seuil, entre préjugés, cendres et alliance inattendue.</p><a class="read-link" href="https://mybook.to/AI0cMy" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/7loKTyW" rel="noopener noreferrer"><img src="/images/books/lheure-brisee.jpeg" alt="Couverture de L’Heure Brisée" /></a><p class="book-status">Tome 4 · Le temps</p><h3>L’Heure Brisée</h3><p>Stephen Vance sait réparer les horloges, pas le silence de onze années qui le sépare de sa mère. À Blackwood, les secondes se figent, des personnes disparaissent et le Chronophage approche. Il devra accepter que le temps est une force à traverser, pas seulement une mécanique à corriger.</p><a class="read-link" href="https://mybook.to/7loKTyW" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/lABou" rel="noopener noreferrer"><img src="/images/books/les-peints-morts.jpeg" alt="Couverture de Les Peints-Morts" /></a><p class="book-status">Tome 5 · La toile</p><h3>Les Peints-Morts</h3><p>Au Metropolitan Museum of Art, Julian Vance rend leur lumière aux tableaux oubliés. Mais un portrait du XVIe siècle ouvre les yeux sous son pinceau : un homme vit derrière la toile. Pour le sauver, Julian devra transformer l’art en arme et assumer un don qu’il a toujours réprimé.</p><a class="read-link" href="https://mybook.to/lABou" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
-        <article class="book-card"><a class="book-cover" href="https://mybook.to/brxiD" rel="noopener noreferrer"><img src="/images/books/le-dernier-reve.jpeg" alt="Couverture de Le Dernier Rêve" /></a><p class="book-status">Tome 6 · Le choix</p><h3>Le Dernier Rêve</h3><p>Alors que les six Seuils convergent et que les mondes se fissurent, Patrick et les Gardiens affrontent l’ultime question : faut-il conserver un monde imparfait, avec sa douleur et sa liberté, ou le remplacer par un rêve sans souffrance&nbsp;?</p><a class="read-link" href="https://mybook.to/brxiD" rel="noopener noreferrer">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer"><img src="/images/books/le-nexus-seveille.jpeg" alt="Couverture de Le Nexus s’éveille" /></a><p class="book-status" data-i18n="book-one-status">Tome 1 · Le commencement</p><h3>Le Nexus s’éveille</h3><p data-i18n="book-one-copy">À Brooklyn, Patrick Hayes restaure des œuvres d’art jusqu’au jour où une goutte d’argent impossible réveille le Nexus sous sa peau. Avec Steven, un exilé venu d’ailleurs, il franchit un premier Seuil et comprend que son passé familial cache autant de dangers que les mondes inconnus.</p><a class="read-link" href="https://mybook.to/Zy7b9D" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/DxKntm6" rel="noopener noreferrer"><img src="/images/books/le-royaume-de-verre.jpeg" alt="Couverture de Le Royaume de Verre" /></a><p class="book-status" data-i18n="book-two-status">Tome 2 · Le reflet</p><h3>Le Royaume de Verre</h3><p data-i18n="book-two-copy">Thomas Hayes reçoit un appel de son propre numéro : son frère jumeau l’avertit de ne pas faire confiance aux miroirs. Un miroir d’argent noirci, une poursuivante et un double déformé l’obligent à découvrir que le Nexus n’avait peut-être jamais choisi un seul Gardien.</p><a class="read-link" href="https://mybook.to/DxKntm6" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/AI0cMy" rel="noopener noreferrer"><img src="/images/books/le-phenix-de-cendre.jpeg" alt="Couverture de Le Phénix de Cendre" /></a><p class="book-status" data-i18n="book-three-status">Tome 3 · L’eau et le feu</p><h3>Le Phénix de Cendre</h3><p data-i18n="book-three-copy">À Marée-Mystique, Lucian Morvan est un mage de l’Eau que les siens jugent trop lent, trop différent. Quand l’Eau faiblit et qu’une ancienne guerre menace de renaître, une prophétie l’entraîne vers un nouveau Seuil, entre préjugés, cendres et alliance inattendue.</p><a class="read-link" href="https://mybook.to/AI0cMy" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/7loKTyW" rel="noopener noreferrer"><img src="/images/books/lheure-brisee.jpeg" alt="Couverture de L’Heure Brisée" /></a><p class="book-status" data-i18n="book-four-status">Tome 4 · Le temps</p><h3>L’Heure Brisée</h3><p data-i18n="book-four-copy">Stephen Vance sait réparer les horloges, pas le silence de onze années qui le sépare de sa mère. À Blackwood, les secondes se figent, des personnes disparaissent et le Chronophage approche. Il devra accepter que le temps est une force à traverser, pas seulement une mécanique à corriger.</p><a class="read-link" href="https://mybook.to/7loKTyW" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/lABou" rel="noopener noreferrer"><img src="/images/books/les-peints-morts.jpeg" alt="Couverture de Les Peints-Morts" /></a><p class="book-status" data-i18n="book-five-status">Tome 5 · La toile</p><h3>Les Peints-Morts</h3><p data-i18n="book-five-copy">Au Metropolitan Museum of Art, Julian Vance rend leur lumière aux tableaux oubliés. Mais un portrait du XVIe siècle ouvre les yeux sous son pinceau : un homme vit derrière la toile. Pour le sauver, Julian devra transformer l’art en arme et assumer un don qu’il a toujours réprimé.</p><a class="read-link" href="https://mybook.to/lABou" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
+        <article class="book-card"><a class="book-cover" href="https://mybook.to/brxiD" rel="noopener noreferrer"><img src="/images/books/le-dernier-reve.jpeg" alt="Couverture de Le Dernier Rêve" /></a><p class="book-status" data-i18n="book-six-status">Tome 6 · Le choix</p><h3>Le Dernier Rêve</h3><p data-i18n="book-six-copy">Alors que les six Seuils convergent et que les mondes se fissurent, Patrick et les Gardiens affrontent l’ultime question : faut-il conserver un monde imparfait, avec sa douleur et sa liberté, ou le remplacer par un rêve sans souffrance&nbsp;?</p><a class="read-link" href="https://mybook.to/brxiD" rel="noopener noreferrer" data-i18n="book-link">Découvrir le tome <b>↗</b></a></article>
       </div>
     </section>
 
     <section id="demarche" class="author-statement author-work" aria-labelledby="fiction-title">
-      <div><p class="eyebrow">Ce qui traverse mon travail</p><h2 id="fiction-title">L’imaginaire, pour parler de nous.</h2></div>
-      <div><p>La magie, les portails et les mondes parallèles ne sont jamais là pour effacer l’humain. Ils servent à l’approcher autrement : par la mémoire, les traumatismes, les désirs, les loyautés et la possibilité de se transformer.</p><p>J’aime les personnages émotionnellement intenses, les mystères qui comptent vraiment, les liens qui ne simplifient rien — mais qui rendent la traversée possible. C’est là que je trouve le cœur d’une histoire.</p></div>
+      <div><p class="eyebrow" data-i18n="approach-eyebrow">Ce qui traverse mon travail</p><h2 id="fiction-title" data-i18n="approach-title">L’imaginaire, pour parler de nous.</h2></div>
+      <div><p data-i18n="approach-copy-one">La magie, les portails et les mondes parallèles ne sont jamais là pour effacer l’humain. Ils servent à l’approcher autrement : par la mémoire, les traumatismes, les désirs, les loyautés et la possibilité de se transformer.</p><p data-i18n="approach-copy-two">J’aime les personnages émotionnellement intenses, les mystères qui comptent vraiment, les liens qui ne simplifient rien — mais qui rendent la traversée possible. C’est là que je trouve le cœur d’une histoire.</p></div>
     </section>
 
     <section class="author-bio" aria-labelledby="bio-title">
-      <p class="eyebrow">Au cœur de mes livres</p>
-      <h2 id="bio-title">Je ne cherche pas à écrire des héros parfaits.</h2>
+      <p class="eyebrow" data-i18n="bio-eyebrow">Au cœur de mes livres</p>
+      <h2 id="bio-title" data-i18n="bio-title">Je ne cherche pas à écrire des héros parfaits.</h2>
       <blockquote>
-        <p>Je cherche des personnages qui continuent, même quand ils ont peur. Des personnes marquées par la vie, capables de douter, d’aimer, de se tromper et de choisir quand même. J’aime les histoires où une relation, un souvenir ou un geste de bonté peut devenir une force assez réelle pour changer un destin.</p>
+        <p data-i18n="bio-quote">Je cherche des personnages qui continuent, même quand ils ont peur. Des personnes marquées par la vie, capables de douter, d’aimer, de se tromper et de choisir quand même. J’aime les histoires où une relation, un souvenir ou un geste de bonté peut devenir une force assez réelle pour changer un destin.</p>
       </blockquote>
-      <p class="bio-note">Mes livres parlent de fantasy et de mondes cachés, oui. Mais surtout de vulnérabilité, de résilience, de liens humains et de la lumière qu’on trouve parfois au milieu de ce qui nous brise.</p>
+      <p class="bio-note" data-i18n="bio-note">Mes livres parlent de fantasy et de mondes cachés, oui. Mais surtout de vulnérabilité, de résilience, de liens humains et de la lumière qu’on trouve parfois au milieu de ce qui nous brise.</p>
     </section>
 
   </section>
@@ -87,5 +99,71 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       link.setAttribute('target', '_blank');
       link.setAttribute('rel', 'noopener noreferrer');
     });
+
+    const english = {
+      'author-nav-label': 'Author navigation',
+      'language-label': 'Choose language',
+      'main-author': 'Author', 'main-saga': 'The series', 'main-books': 'Books', 'main-approach': 'My approach', 'main-contact': 'Contact',
+      'contact-eyebrow': 'Contact', 'contact-title': 'Professional contact<br /><em>& author inquiries.</em>',
+      'contact-copy': 'For press, bookseller, festival, interview, or other inquiries about my books, you can write to me directly.',
+      'contact-note': 'Official address for Patrick Lovesmore.',
+      'hero-eyebrow': 'Patrick Lovesmore · Epic fantasy · MM romance',
+      'hero-title': 'I write to give<br /><em>shape to what connects us.</em>',
+      'hero-lead': 'I am Patrick Lovesmore. I write stories where love, memory, and our wounds become passages to the impossible.',
+      'hero-saga': 'Explore the series <span>↓</span>', 'hero-about': 'Discover me <span>↓</span>',
+      'subnav-label': 'Author page navigation', 'subnav-about': 'About me', 'subnav-saga': 'The series', 'subnav-books': 'All six books', 'subnav-approach': 'My approach', 'subnav-contact': 'Contact',
+      'about-eyebrow': 'About me', 'about-title': 'Patrick Lovesmore,<br /><em>that’s me.</em>',
+      'about-copy-one': 'I am a Québécois author, composer, and software architect from Saint-Jérôme. Patrick Lovesmore is my pen name: the name under which I bring together my novels, my music, and the worlds I have been building for a long time.',
+      'about-copy-two': 'I am drawn to fantasy, science fiction, pop and Celtic music, myths, and stories that take the time to enter into what is human. I can love immense universes and complex ideas, but I always return to the same thing: people, their wounds, their impulses, and what lets them keep going.',
+      'about-copy-three': 'I write because imagination gives me a way to speak about our world without reducing it. That is where my stories begin: where humanity remains possible.',
+      'card-one-title': 'The story awakens', 'card-one-copy': 'My stories often begin with a simple question: what lets us remain human when the world becomes too vast, too strange, or too difficult to carry alone?',
+      'card-two-title': 'Human resonance', 'card-two-copy': 'I write fantasy novels and more personal stories, where characters are never only what they show. I am drawn to complex worlds, bonds that endure, scars, light—and the places where tenderness becomes a form of courage.',
+      'saga-eyebrow': 'The series', 'featured-status': 'Book 1 · The gateway',
+      'featured-copy': 'Six worlds. Six Thresholds. Six Guardians who did not choose one another, but who must learn to move forward together. It begins when Patrick Hayes discovers the Nexus, a force that opens passages to forgotten worlds. Through reflections, time, water, fire, art, and dreams, the series becomes a story of ancient powers, family, love, and what we choose to carry for others.',
+      'fact-volumes': '6 books', 'fact-genre': 'Literary fantasy', 'fact-romance': 'MM romance', 'featured-link': 'Discover the first book <b>↗</b>',
+      'books-eyebrow': 'The books', 'books-title': 'The complete six-book series.', 'books-copy': 'Each volume opens a Threshold, follows a Guardian, and expands the universe toward its final dream.',
+      'book-one-status': 'Book 1 · The beginning', 'book-one-copy': 'In Brooklyn, Patrick Hayes restores works of art until an impossible silver drop awakens the Nexus beneath his skin. With Steven, an exile from elsewhere, he crosses a first Threshold and learns that his family history conceals as much danger as the unknown worlds.',
+      'book-two-status': 'Book 2 · The reflection', 'book-two-copy': 'Thomas Hayes receives a call from his own number: his twin brother warns him not to trust mirrors. A tarnished silver mirror, a pursuer, and a twisted double force him to discover that the Nexus may never have chosen only one Guardian.',
+      'book-three-status': 'Book 3 · Water and fire', 'book-three-copy': 'In Mystic Tide, Lucian Morvan is a Water mage his own people find too slow, too different. When Water weakens and an ancient war threatens to return, a prophecy draws him toward a new Threshold, between prejudice, ashes, and an unexpected alliance.',
+      'book-four-status': 'Book 4 · Time', 'book-four-copy': 'Stephen Vance knows how to repair clocks, not the silence of eleven years between him and his mother. In Blackwood, seconds freeze, people disappear, and the Chronophage approaches. He must accept that time is a force to cross, not merely a mechanism to fix.',
+      'book-five-status': 'Book 5 · The canvas', 'book-five-copy': 'At the Metropolitan Museum of Art, Julian Vance restores light to forgotten paintings. But a sixteenth-century portrait opens its eyes beneath his brush: a man lives behind the canvas. To save him, Julian must turn art into a weapon and claim a gift he has always suppressed.',
+      'book-six-status': 'Book 6 · The choice', 'book-six-copy': 'As the six Thresholds converge and the worlds fracture, Patrick and the Guardians face the ultimate question: should they preserve an imperfect world, with its pain and freedom, or replace it with a dream without suffering?',
+      'book-link': 'Discover the book <b>↗</b>',
+      'approach-eyebrow': 'What runs through my work', 'approach-title': 'Imagination, to speak about us.',
+      'approach-copy-one': 'Magic, portals, and parallel worlds are never there to erase what is human. They help me approach it differently: through memory, trauma, desire, loyalty, and the possibility of transformation.',
+      'approach-copy-two': 'I love emotionally intense characters, mysteries that truly matter, bonds that simplify nothing—but make the journey possible. That is where I find the heart of a story.',
+      'bio-eyebrow': 'At the heart of my books', 'bio-title': 'I do not seek to write perfect heroes.',
+      'bio-quote': 'I seek characters who keep going, even when they are afraid. People marked by life, able to doubt, love, make mistakes, and choose anyway. I love stories where a relationship, a memory, or an act of kindness can become a force real enough to change a destiny.',
+      'bio-note': 'My books are about fantasy and hidden worlds, yes. But above all, they are about vulnerability, resilience, human bonds, and the light we sometimes find in the middle of what breaks us.'
+    };
+
+    const original = new Map();
+    document.querySelectorAll('[data-i18n]').forEach((element) => original.set(element, element.innerHTML));
+    document.querySelectorAll('[data-i18n-aria]').forEach((element) => original.set(element, element.getAttribute('aria-label') || ''));
+
+    const applyLanguage = (language) => {
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-i18n]').forEach((element) => {
+        const key = element.dataset.i18n;
+        element.innerHTML = language === 'en' && key && english[key] ? english[key] : original.get(element);
+      });
+      document.querySelectorAll('[data-i18n-aria]').forEach((element) => {
+        const key = element.dataset.i18nAria;
+        element.setAttribute('aria-label', language === 'en' && key && english[key] ? english[key] : original.get(element));
+      });
+      document.querySelectorAll('[data-language]').forEach((button) => {
+        button.setAttribute('aria-pressed', String(button.dataset.language === language));
+      });
+    };
+
+    const storedLanguage = localStorage.getItem('patrick-lovesmore-language');
+    const browserLanguage = navigator.languages?.[0] || navigator.language;
+    const initialLanguage = storedLanguage === 'en' || (!storedLanguage && browserLanguage.startsWith('en')) ? 'en' : 'fr';
+    applyLanguage(initialLanguage);
+    document.querySelectorAll('[data-language]').forEach((button) => button.addEventListener('click', () => {
+      const language = button.dataset.language === 'en' ? 'en' : 'fr';
+      localStorage.setItem('patrick-lovesmore-language', language);
+      applyLanguage(language);
+    }));
   </script>
 </BaseLayout>

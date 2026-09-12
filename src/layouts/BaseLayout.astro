@@ -37,11 +37,16 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
           <span class="brand-mark">✦</span>
           <span><strong>Patrick Lovesmore</strong><small>Auteur de fantasy</small></span>
         </a>
-        <nav aria-label="Navigation de l’auteur">
-          <a href="/auteur#a-propos">L’auteur</a>
-          <a href="/auteur#saga">La saga</a>
-          <a href="/auteur#livres">Les livres</a>
-          <a href="/auteur#demarche">Ma démarche</a>
+        <nav aria-label="Navigation de l’auteur" data-i18n-aria="author-nav-label">
+          <a href="/auteur#a-propos" data-i18n="main-author">L’auteur</a>
+          <a href="/auteur#saga" data-i18n="main-saga">La saga</a>
+          <a href="/auteur#livres" data-i18n="main-books">Les livres</a>
+          <a href="/auteur#demarche" data-i18n="main-approach">Ma démarche</a>
+          <a href="/auteur#contact" data-i18n="main-contact">Contact</a>
+          <span class="language-switcher" aria-label="Choisir la langue" data-i18n-aria="language-label">
+            <button type="button" data-language="fr" aria-pressed="true">FR</button>
+            <button type="button" data-language="en" aria-pressed="false">EN</button>
+          </span>
         </nav>
       </header>
     ) : (

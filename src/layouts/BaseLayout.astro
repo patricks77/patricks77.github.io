@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 
 interface Props {
   title: string;
@@ -65,10 +66,12 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <main id="contenu">
       <slot />
     </main>
+    {variant === 'blog' && <NewsletterSignup />}
     <footer class:list={['site-footer', variant === 'author' && 'author-site-footer']}>
       <div>
         <span class="footer-name">Patrick Lovesmore</span>
         <span class="footer-note">{variant === 'author' ? 'Les Architectes du Dernier Monde.' : 'Un regard sur l’humanité.'}</span>
+        {variant === 'blog' && <a class="footer-rss" href="/rss.xml">Suivre le flux RSS</a>}
       </div>
       <span>© {new Date().getFullYear()}</span>
     </footer>

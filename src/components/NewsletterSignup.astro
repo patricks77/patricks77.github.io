@@ -1,0 +1,35 @@
+---
+const formAction = 'https://buttondown.com/api/emails/embed-subscribe/lovesmore';
+---
+
+<section class="newsletter-signup" aria-labelledby="newsletter-title">
+  <div class="newsletter-copy">
+    <p class="eyebrow">L’infolettre</p>
+    <h2 id="newsletter-title">Recevoir les prochains <em>fragments.</em></h2>
+    <p>De nouveaux textes, seulement lorsqu’ils seront prêts à être partagés.</p>
+  </div>
+  <form action={formAction} method="post" class="newsletter-form">
+    <input type="hidden" name="embed" value="1" />
+    <label for="newsletter-email">Votre adresse courriel</label>
+    <div class="newsletter-fields">
+      <input id="newsletter-email" name="email" type="email" autocomplete="email" placeholder="vous@exemple.com" required />
+      <button type="submit">S’inscrire</button>
+    </div>
+    <p class="newsletter-note">Vous pourrez vous désabonner à tout moment.</p>
+  </form>
+</section>
+
+<style>
+  .newsletter-signup { width:min(1160px,calc(100% - 4rem)); margin:0 auto 4.5rem; padding:clamp(2rem,5vw,4rem); display:grid; grid-template-columns:minmax(0,1fr) minmax(300px,.75fr); align-items:center; gap:clamp(2rem,6vw,6rem); border:1px solid var(--line); background:rgba(239,247,255,.74); box-shadow:0 18px 60px rgba(24,87,152,.08); }
+  .newsletter-copy h2 { margin:.25rem 0 1rem; max-width:600px; font-size:clamp(2rem,4vw,3.4rem); }
+  .newsletter-copy > p:not(.eyebrow) { max-width:540px; margin:0; color:var(--muted); }
+  .newsletter-form { display:grid; gap:.65rem; }
+  .newsletter-form label { color:var(--muted); font:700 .72rem system-ui,sans-serif; letter-spacing:.04em; }
+  .newsletter-fields { display:flex; gap:.65rem; }
+  .newsletter-fields input { min-width:0; flex:1; padding:.78rem .9rem; border:1px solid rgba(15,103,183,.28); border-radius:4px; background:#fff; color:var(--text); font:1rem Georgia,serif; }
+  .newsletter-fields input:focus { outline:2px solid rgba(20,120,212,.45); outline-offset:2px; }
+  .newsletter-fields button { border:0; border-radius:4px; padding:.78rem 1rem; background:var(--accent); color:#fff; cursor:pointer; font:700 .78rem system-ui,sans-serif; transition:background .2s ease,transform .2s ease; }
+  .newsletter-fields button:hover { background:#095fae; transform:translateY(-1px); }
+  .newsletter-note { margin:0; color:var(--faint); font:.72rem/1.45 system-ui,sans-serif; }
+  @media (max-width:760px) { .newsletter-signup { width:min(100% - 2rem,1160px); grid-template-columns:1fr; margin-bottom:3rem; }.newsletter-fields { flex-direction:column; }.newsletter-fields button { width:100%; } }
+</style>

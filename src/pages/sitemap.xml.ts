@@ -1,7 +1,9 @@
 const pages = [
   { path: '/', priority: '1.0' },
   { path: '/journal', priority: '0.9' },
+  { path: '/journal/les-probabilites-detre-soi', priority: '0.9' },
   { path: '/journal/la-chanson-de-noel-que-je-nai-pas-ecrite', priority: '0.9' },
+  { path: '/journal/les-livres-que-je-porte', priority: '0.9' },
   { path: '/about', priority: '0.7' },
 ];
 
